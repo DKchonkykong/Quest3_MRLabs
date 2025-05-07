@@ -433,6 +433,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs"
+"Assets/SpecialAnchorLabs/Object_Spawner.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 /deterministic
