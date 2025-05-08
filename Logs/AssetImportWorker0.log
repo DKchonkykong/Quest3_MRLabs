@@ -15,7 +15,7 @@ C:/Users/806395/Workspace/Quest3_MRLabs
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50715
+52562
 Successfully changed project path to: C:/Users/806395/Workspace/Quest3_MRLabs
 C:/Users/806395/Workspace/Quest3_MRLabs
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,14 +49,14 @@ C:/Users/806395/Workspace/Quest3_MRLabs
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [22020] Host "[IP] 10.140.9.73 [Port] 0 [Flags] 2 [Guid] 3798561173 [EditorId] 3798561173 [Version] 1048832 [Id] WindowsEditor(7,RB-335-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [27044] Host "[IP] 10.140.9.73 [Port] 0 [Flags] 2 [Guid] 2943621866 [EditorId] 2943621866 [Version] 1048832 [Id] WindowsEditor(7,RB-335-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [22020] Host "[IP] 10.140.9.73 [Port] 0 [Flags] 2 [Guid] 3798561173 [EditorId] 3798561173 [Version] 1048832 [Id] WindowsEditor(7,RB-335-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [27044] Host "[IP] 10.140.9.73 [Port] 0 [Flags] 2 [Guid] 2943621866 [EditorId] 2943621866 [Version] 1048832 [Id] WindowsEditor(7,RB-335-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-Refreshing native plugins compatible for Editor in 848.04 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 20.76 ms, found 10 plugins.
 Unity memory allocator detected: MetaXRAudio native memory allocations will be tracked.
-Preloading 3 native plugins for Editor in 5.20 ms.
+Preloading 3 native plugins for Editor in 3.99 ms.
 Initialize engine version: 2022.3.36f1 (95a4219250e5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/806395/Workspace/Quest3_MRLabs/Assets
@@ -73,51 +73,51 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.024045 seconds.
-- Loaded All Assemblies, in  0.396 seconds
+Registered in 0.021470 seconds.
+- Loaded All Assemblies, in  0.460 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 722 ms
+Android Extension - Scanning For ADB Devices 704 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.110 seconds
-Domain Reload Profiling: 1503ms
-	BeginReloadAssembly (128ms)
+- Finished resetting the current domain, in  1.115 seconds
+Domain Reload Profiling: 1572ms
+	BeginReloadAssembly (138ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (78ms)
-	LoadAllAssembliesAndSetupDomain (145ms)
-		LoadAssemblies (125ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (90ms)
+	LoadAllAssembliesAndSetupDomain (180ms)
+		LoadAssemblies (134ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (142ms)
-			TypeCache.Refresh (141ms)
-				TypeCache.ScanAssembly (127ms)
+		AnalyzeDomain (176ms)
+			TypeCache.Refresh (175ms)
+				TypeCache.ScanAssembly (158ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (1111ms)
+	FinalizeReload (1115ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1055ms)
+		SetupLoadedEditorAssemblies (1056ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (855ms)
+			InitializePlatformSupportModulesInManaged (850ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (132ms)
-			ProcessInitializeOnLoadMethodAttributes (61ms)
+			ProcessInitializeOnLoadAttributes (144ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -126,8 +126,8 @@ Domain Reload Profiling: 1503ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  8.423 seconds
-Refreshing native plugins compatible for Editor in 15.91 ms, found 10 plugins.
+- Loaded All Assemblies, in  0.669 seconds
+Refreshing native plugins compatible for Editor in 16.41 ms, found 10 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
@@ -329,49 +329,49 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.539 seconds
-Domain Reload Profiling: 9952ms
-	BeginReloadAssembly (157ms)
+- Finished resetting the current domain, in  1.003 seconds
+Domain Reload Profiling: 1664ms
+	BeginReloadAssembly (173ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (26ms)
-	RebuildCommonClasses (36ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (34ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (8165ms)
-		LoadAssemblies (8092ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (401ms)
+		LoadAssemblies (329ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (165ms)
-			TypeCache.Refresh (112ms)
-				TypeCache.ScanAssembly (92ms)
-			ScanForSourceGeneratedMonoScriptInfo (37ms)
+		AnalyzeDomain (177ms)
+			TypeCache.Refresh (123ms)
+				TypeCache.ScanAssembly (96ms)
+			ScanForSourceGeneratedMonoScriptInfo (38ms)
 			ResolveRequiredComponents (15ms)
-	FinalizeReload (1540ms)
+	FinalizeReload (1004ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1324ms)
+		SetupLoadedEditorAssemblies (767ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (31ms)
+			InitializePlatformSupportModulesInManaged (43ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (93ms)
-			ProcessInitializeOnLoadAttributes (1125ms)
-			ProcessInitializeOnLoadMethodAttributes (54ms)
-			AfterProcessingInitializeOnLoad (15ms)
+			BeforeProcessingInitializeOnLoad (95ms)
+			ProcessInitializeOnLoadAttributes (570ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (11ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Shader 'Meta/MRUK/Scene/HighlightsAndShadows': fallback shader 'Off' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 18.58 ms, found 10 plugins.
-Preloading 3 native plugins for Editor in 0.24 ms.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 21.73 ms, found 10 plugins.
+Preloading 3 native plugins for Editor in 0.23 ms.
 Unloading 3169 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 62 unused Assets / (490.3 KB). Loaded Objects now: 3600.
+Unloading 62 unused Assets / (490.8 KB). Loaded Objects now: 3600.
 Memory consumption went from 167.4 MB to 166.9 MB.
-Total: 6.727600 ms (FindLiveObjects: 0.293700 ms CreateObjectMapping: 0.350900 ms MarkObjects: 5.666100 ms  DeleteObjects: 0.415400 ms)
+Total: 8.442100 ms (FindLiveObjects: 0.314400 ms CreateObjectMapping: 0.362900 ms MarkObjects: 7.357100 ms  DeleteObjects: 0.406200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -389,341 +389,673 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 74148.212135 seconds.
-  path: Packages/com.meta.xr.sdk.core/Scripts/EnvironmentDepth/Meta.XR.EnvironmentDepth.asmdef
-  artifactKey: Guid(272a8fb436017ef46bc333f117faba38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Scripts/EnvironmentDepth/Meta.XR.EnvironmentDepth.asmdef using Guid(272a8fb436017ef46bc333f117faba38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'c5856f90f6665ae1e4e6c96742054bb6') in 0.002290 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Packages/com.meta.xr.sdk.core/Scripts/EnvironmentDepth/EnvironmentDepthManager.cs
-  artifactKey: Guid(71a155ece80369d4e99bdaf5e59169b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Scripts/EnvironmentDepth/EnvironmentDepthManager.cs using Guid(71a155ece80369d4e99bdaf5e59169b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '74a47d095e0504546470351ab4e18e57') in 0.000619 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Packages/com.meta.xr.sdk.core/Shaders/EnvironmentDepth/EnvironmentOcclusion.cginc
-  artifactKey: Guid(f09daaec954a02243b97eea34ed0d35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Shaders/EnvironmentDepth/EnvironmentOcclusion.cginc using Guid(f09daaec954a02243b97eea34ed0d35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '0ac26c5d96c4aa79caa120b6204a9abe') in 0.012361 seconds
+  Time since last request: 76002.938362 seconds.
+  path: Assets/BallColour.mat
+  artifactKey: Guid(7836354f06188444897aee0887da7e2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BallColour.mat using Guid(7836354f06188444897aee0887da7e2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4dbb65e80dce4f5e8deaed2d2e139797') in 0.089693 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Packages/com.meta.xr.mrutilitykit/Editor/BuildingBlocks/InstantContentPlacement/Prefabs/EnvironmentRaycastManager.prefab
-  artifactKey: Guid(993a7abbb30564a439b9818cdc8d9fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.mrutilitykit/Editor/BuildingBlocks/InstantContentPlacement/Prefabs/EnvironmentRaycastManager.prefab using Guid(993a7abbb30564a439b9818cdc8d9fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'a7d87f0362417153d0ca6d8651112df5') in 0.016620 seconds
+  Time since last request: 322.312382 seconds.
+  path: Assets/Scenes/SpatialAnchorsLabs0.unity
+  artifactKey: Guid(990a805f307f42741a49980bde6d0616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SpatialAnchorsLabs0.unity using Guid(990a805f307f42741a49980bde6d0616) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'aabe4a0789b37710f628174334c1c4fe') in 0.000776 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  8.954 seconds
+Refreshing native plugins compatible for Editor in 19.98 ms, found 10 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Synthetic Environments] got match start synth_env_server.exe Bedroom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server.exe GameRoom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server.exe LivingRoom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom2_3
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom2_4
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom5_6
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom5_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom3_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_2
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_4
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.2.0\Runtime\OculusLoader.cs:298 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0008c] in .\Library\PackageCache\com.unity.xr.oculus@4.2.0\Runtime\OculusLoader.cs:283 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <51fded79cd284d4d911c5949aff4cb21>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <51fded79cd284d4d911c5949aff4cb21>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <51fded79cd284d4d911c5949aff4cb21>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <2201ab87e660427c974282df3bb3cf36>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  7.130 seconds
+Domain Reload Profiling: 16076ms
+	BeginReloadAssembly (179ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (8695ms)
+		LoadAssemblies (8778ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (7130ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (581ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (94ms)
+			ProcessInitializeOnLoadAttributes (403ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Shader 'Meta/MRUK/Scene/HighlightsAndShadows': fallback shader 'Off' not found
+Refreshing native plugins compatible for Editor in 18.84 ms, found 10 plugins.
+Preloading 3 native plugins for Editor in 0.24 ms.
+Unloading 3058 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 52 unused Assets / (463.0 KB). Loaded Objects now: 3641.
+Memory consumption went from 142.1 MB to 141.7 MB.
+Total: 5.858100 ms (FindLiveObjects: 0.288200 ms CreateObjectMapping: 0.246200 ms MarkObjects: 5.026700 ms  DeleteObjects: 0.295900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 72.290813 seconds.
-  path: Assets/Resources/MetaXRAudioSettings.asset
-  artifactKey: Guid(885c19c1373bd5440be6bbd01dbeec72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/MetaXRAudioSettings.asset using Guid(885c19c1373bd5440be6bbd01dbeec72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'f4b560bbacb2664d68813f1ef35a8a78') in 0.001342 seconds
+  Time since last request: 360.489962 seconds.
+  path: Assets/Scenes/SpatialAnchorsLabs0 1.unity
+  artifactKey: Guid(5c476d23f828e64408c4dfc4ef7c874d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SpatialAnchorsLabs0 1.unity using Guid(5c476d23f828e64408c4dfc4ef7c874d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '662404c82935864407491fcda6f6dbe4') in 0.004411 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 15.812173 seconds.
+  path: Assets/Scenes/MR-Lab5-HLSL.unity
+  artifactKey: Guid(5c476d23f828e64408c4dfc4ef7c874d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MR-Lab5-HLSL.unity using Guid(5c476d23f828e64408c4dfc4ef7c874d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '071929afcc4fd05bbca7614f971e3960') in 0.000551 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 47.968192 seconds.
+  path: Assets/MR_Lab5_Shaders
+  artifactKey: Guid(34be22a8e081c554d802934d9b0caee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders using Guid(34be22a8e081c554d802934d9b0caee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '47ff06cf569dfdf8d09376b9e239f7e1') in 0.000528 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 40.038573 seconds.
+  path: Assets/MR_Lab5_Shaders/HelloWorld.shader
+  artifactKey: Guid(7e8263500d211304ca01a453f47fa7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/HelloWorld.shader using Guid(7e8263500d211304ca01a453f47fa7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2c9f7ada2ddef034370c4ec6bb7d668d') in 0.014760 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.004992 seconds.
-  path: Assets/MetaXR/MetaXRProjectSettings.asset
-  artifactKey: Guid(d9460c7f98b2b2742b31c479381aa601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MetaXR/MetaXRProjectSettings.asset using Guid(d9460c7f98b2b2742b31c479381aa601) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'dc81bec2f8f9fa5a9c6b190abe76f8ee') in 0.002976 seconds
+  Time since last request: 12.559167 seconds.
+  path: Assets/MR_Lab5_Shaders/Hello World.shader
+  artifactKey: Guid(7e8263500d211304ca01a453f47fa7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/Hello World.shader using Guid(7e8263500d211304ca01a453f47fa7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '38b470547cf4f99f042fbfce46cc4ffc') in 0.002367 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 8.083114 seconds.
-  path: Packages/com.meta.xr.sdk.audio/Runtime/Meta.XR.Audio.asmdef
-  artifactKey: Guid(a9f1da384a134aa5af763cbed09bbfcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.audio/Runtime/Meta.XR.Audio.asmdef using Guid(a9f1da384a134aa5af763cbed09bbfcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'a2716ebb3edc70e1817ec0752bb33672') in 0.000564 seconds
+  Time since last request: 60.639343 seconds.
+  path: Assets/MR_Lab5_Shaders/Hello World.shader
+  artifactKey: Guid(7e8263500d211304ca01a453f47fa7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/Hello World.shader using Guid(7e8263500d211304ca01a453f47fa7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '34c26d72475c03875a1bd4fdd76a2c68') in 0.001417 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.004883 seconds.
-  path: Packages/com.meta.xr.sdk.audio/editor/Meta.XR.Audio.Editor.asmdef
-  artifactKey: Guid(278f548ecd784ef0b4864464e65af41e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.audio/editor/Meta.XR.Audio.Editor.asmdef using Guid(278f548ecd784ef0b4864464e65af41e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '058f04d4468fcf10d8efb0dd502f0aab') in 0.000509 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.005213 seconds.
-  path: Packages/com.meta.xr.sdk.core/Scripts/BuildingBlocks/Meta.XR.BuildingBlocks.asmdef
-  artifactKey: Guid(d0574574baafe9d4aa78d8df4a5e3e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Scripts/BuildingBlocks/Meta.XR.BuildingBlocks.asmdef using Guid(d0574574baafe9d4aa78d8df4a5e3e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '84253a09b2169677888c524842d6a6a8') in 0.000529 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.005056 seconds.
-  path: Packages/com.meta.xr.sdk.core/Scripts/BuildingBlocks/OcclusionBIRP/Meta.XR.BuildingBlocks.DepthAPI.asmdef
-  artifactKey: Guid(a3886518c8f41964899dc237da89632f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Scripts/BuildingBlocks/OcclusionBIRP/Meta.XR.BuildingBlocks.DepthAPI.asmdef using Guid(a3886518c8f41964899dc237da89632f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'a68bef6c301f1b150fb06258ebe6dffd') in 0.000536 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.004875 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/Occlusion/Meta.XR.BuildingBlocks.DepthAPI.Editor.asmdef
-  artifactKey: Guid(3b30c7ebd2bed784389123a54b7d13f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/Occlusion/Meta.XR.BuildingBlocks.DepthAPI.Editor.asmdef using Guid(3b30c7ebd2bed784389123a54b7d13f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'edf88a690fe80ab558f815d950dac7fc') in 0.000528 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.004761 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/Meta.XR.BuildingBlocks.Editor.asmdef
-  artifactKey: Guid(93bda9a2bc9dddc43930634fa65d6e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/Meta.XR.BuildingBlocks.Editor.asmdef using Guid(93bda9a2bc9dddc43930634fa65d6e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '5a465ea032d996e3017c845738535cbd') in 0.000495 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.004705 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/Utils/EditorCallbacks/Meta.XR.Editor.Callbacks.asmdef
-  artifactKey: Guid(111e9739e83e9164ebb64fae08165264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/Utils/EditorCallbacks/Meta.XR.Editor.Callbacks.asmdef using Guid(111e9739e83e9164ebb64fae08165264) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'c94353cc5b67742445cfb792a2ce4ee5') in 0.000513 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.004997 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/Guide/Guides/About/Meta.XR.Editor.Guide.About.asmdef
-  artifactKey: Guid(aca2794372cb61c4f9b4dddc4a6dd7bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/Guide/Guides/About/Meta.XR.Editor.Guide.About.asmdef using Guid(aca2794372cb61c4f9b4dddc4a6dd7bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'c53a7461e03820e8d8cf5bcedc92d069') in 0.000534 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.004922 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/Utils/Identified/Meta.XR.Editor.Id.asmdef
-  artifactKey: Guid(86d3c260f0a41e846ab28cd9e4fed3a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/Utils/Identified/Meta.XR.Editor.Id.asmdef using Guid(86d3c260f0a41e846ab28cd9e4fed3a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '008545927d402122a077a08e39d5d443') in 0.000584 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.194081 seconds.
-  path: Packages/com.meta.xr.sdk.interaction/Runtime/UnityXR/Prefabs/XROriginCameraRig.prefab
-  artifactKey: Guid(f9f107e8ecae49048bda9d4fd7e1d1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.interaction/Runtime/UnityXR/Prefabs/XROriginCameraRig.prefab using Guid(f9f107e8ecae49048bda9d4fd7e1d1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '3b702111fa737b77c4e0418ba8fd63cf') in 0.003560 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 19
-========================================================================
-Received Import Request.
-  Time since last request: 481.086519 seconds.
-  path: Assets/TutorialInfo/Icons/URP.png
-  artifactKey: Guid(727a75301c3d24613a3ebcec4a24c2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TutorialInfo/Icons/URP.png using Guid(727a75301c3d24613a3ebcec4a24c2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+  Time since last request: 38.395469 seconds.
+  path: Assets/MR_Lab5_Shaders/BasicColourMaterial.mat
+  artifactKey: Guid(581c9b8cb404adb45877e5e6e53c9657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/BasicColourMaterial.mat using Guid(581c9b8cb404adb45877e5e6e53c9657) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '1b2189aab90d428e4d1bbb635e654d45') in 0.063164 seconds
+ -> (artifact id: 'f7ccbbf05be557e89d2f76effd8f9053') in 0.062904 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 161.229921 seconds.
+  path: Assets/MR_Lab5_Shaders/BasicColourMaterial.mat
+  artifactKey: Guid(581c9b8cb404adb45877e5e6e53c9657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/BasicColourMaterial.mat using Guid(581c9b8cb404adb45877e5e6e53c9657) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2362eb229f4fdd49117c2037f3246f94') in 0.054460 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 25.409489 seconds.
-  path: Packages/com.meta.xr.sdk.interaction/Runtime/Sample/Objects/Props/Box/Materials/Textures/Box_Metal.png
-  artifactKey: Guid(99c02f38a5e1e774f8c2d053dbff389d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.interaction/Runtime/Sample/Objects/Props/Box/Materials/Textures/Box_Metal.png using Guid(99c02f38a5e1e774f8c2d053dbff389d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+  Time since last request: 17.011089 seconds.
+  path: Assets/MR_Lab5_Shaders/VertexDisplacementShader.shader
+  artifactKey: Guid(6425ad79a64e90d439b092f5ccb7770e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/VertexDisplacementShader.shader using Guid(6425ad79a64e90d439b092f5ccb7770e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3f42ffc3570ad355a59462cb44764c42') in 0.001386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 27.802278 seconds.
+  path: Assets/MR_Lab5_Shaders/VertexDisplacementShader 1.shader
+  artifactKey: Guid(1976922df27ab224887faeaee448b3dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/VertexDisplacementShader 1.shader using Guid(1976922df27ab224887faeaee448b3dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '48f49d15fa85cde733910c5a64603bc3') in 0.001675 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 6.777149 seconds.
+  path: Assets/MR_Lab5_Shaders/PixelShader.shader
+  artifactKey: Guid(1976922df27ab224887faeaee448b3dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PixelShader.shader using Guid(1976922df27ab224887faeaee448b3dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b88a870b0eb974dced62215705684085') in 0.001313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 246.332326 seconds.
+  path: Assets/MR_Lab5_Shaders/VertexDisplacementShader.shader
+  artifactKey: Guid(6425ad79a64e90d439b092f5ccb7770e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/VertexDisplacementShader.shader using Guid(6425ad79a64e90d439b092f5ccb7770e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '75349f5eed884566a1e30f8713557c89') in 0.001744 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 61.949249 seconds.
+  path: Assets/MR_Lab5_Shaders/DetailedColourMaterial.mat
+  artifactKey: Guid(ce2801596a193e74caa65de730b8ed94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/DetailedColourMaterial.mat using Guid(ce2801596a193e74caa65de730b8ed94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '8f2533997162b08bc6ac46050b7a8340') in 0.026182 seconds
+ -> (artifact id: '4dfc90293054105551928cd655fbe233') in 0.028360 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 216.597026 seconds.
+  path: Assets/MR_Lab5_Shaders/VertexDisplacementShader.shader
+  artifactKey: Guid(6425ad79a64e90d439b092f5ccb7770e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/VertexDisplacementShader.shader using Guid(6425ad79a64e90d439b092f5ccb7770e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '59eb6bb89c1b25fc1e069747768c18a4') in 0.001582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 71.646377 seconds.
+  path: Assets/MR_Lab5_Shaders/DetailedColourMaterial.mat
+  artifactKey: Guid(ce2801596a193e74caa65de730b8ed94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/DetailedColourMaterial.mat using Guid(ce2801596a193e74caa65de730b8ed94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '24350a12f0a73b28e080fe60c70ab54a') in 0.035869 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Packages/com.meta.xr.sdk.interaction/Runtime/Sample/Objects/Props/Guitar/Materials/Guitar_MetallicSmoothness.png
-  artifactKey: Guid(eba644d9386a37d4c98fe106b92d5675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.interaction/Runtime/Sample/Objects/Props/Guitar/Materials/Guitar_MetallicSmoothness.png using Guid(eba644d9386a37d4c98fe106b92d5675) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+  Time since last request: 15.253939 seconds.
+  path: Assets/MR_Lab5_Shaders/VertexDisplacementShader 1.shader
+  artifactKey: Guid(1f709f0f8c71bbd4e9a63b783aa300c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/VertexDisplacementShader 1.shader using Guid(1f709f0f8c71bbd4e9a63b783aa300c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f9a7db54b482e43c9b8b758d12112dfa') in 0.001442 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 19.763678 seconds.
+  path: Assets/MR_Lab5_Shaders/VertexPulsatingShader.shader
+  artifactKey: Guid(1f709f0f8c71bbd4e9a63b783aa300c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/VertexPulsatingShader.shader using Guid(1f709f0f8c71bbd4e9a63b783aa300c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '13016fc6c6c7af7dd3ae498b1f5fdfd8') in 0.001431 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 57.104056 seconds.
+  path: Assets/MR_Lab5_Shaders/PulsatingColourMaterial.mat
+  artifactKey: Guid(3078c8446232cde4892c38ad5dcf4f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PulsatingColourMaterial.mat using Guid(3078c8446232cde4892c38ad5dcf4f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '503ed2633bd104ee0d327dba39956482') in 0.048923 seconds
+ -> (artifact id: '1e75c900b489a761429a99caab20ba96') in 0.014689 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 110.519705 seconds.
+  path: Assets/MR_Lab5_Shaders/VertexPulsatingShader.shader
+  artifactKey: Guid(1f709f0f8c71bbd4e9a63b783aa300c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/VertexPulsatingShader.shader using Guid(1f709f0f8c71bbd4e9a63b783aa300c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2aef06b5a38549ff0a7e7ae4c36cd6da') in 0.001406 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 192.674466 seconds.
+  path: Assets/MR_Lab5_Shaders/VertexPulsatingShader.shader
+  artifactKey: Guid(1f709f0f8c71bbd4e9a63b783aa300c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/VertexPulsatingShader.shader using Guid(1f709f0f8c71bbd4e9a63b783aa300c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '4fb83284a028f97d67a3e35ef40e1d74') in 0.002040 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 204.227428 seconds.
+  path: Assets/MR_Lab5_Shaders/FragmentPixelColourMaterial.mat
+  artifactKey: Guid(ce49350f3df64a7458c507cb69c2a24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/FragmentPixelColourMaterial.mat using Guid(ce49350f3df64a7458c507cb69c2a24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '92291ada52cc06f8f7d17c94b7c1f978') in 0.025978 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 13.799205 seconds.
+  path: Assets/MR_Lab5_Shaders/PixelShader.shader
+  artifactKey: Guid(1976922df27ab224887faeaee448b3dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PixelShader.shader using Guid(1976922df27ab224887faeaee448b3dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a3ffd6e4e5912f7a819723acf9f31dc1') in 0.001459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 36.943731 seconds.
+  path: Assets/MR_Lab5_Shaders/PixelShader.shader
+  artifactKey: Guid(1976922df27ab224887faeaee448b3dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PixelShader.shader using Guid(1976922df27ab224887faeaee448b3dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b2ef530781d70ab3cf2bf7890375e830') in 0.001564 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 78.605010 seconds.
+  path: Assets/MR_Lab5_Shaders/FragmentPixelColourMaterial.mat
+  artifactKey: Guid(ce49350f3df64a7458c507cb69c2a24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/FragmentPixelColourMaterial.mat using Guid(ce49350f3df64a7458c507cb69c2a24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '2054902bee79ac7afebe9f6cfefb4e5a') in 0.041515 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.055737 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Lib/Hub/Scripts/Editor/Meta.Voice.Hub.Editor.asmdef
-  artifactKey: Guid(a4f6d7d3afe393a4c8034af2ef0f36a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Lib/Hub/Scripts/Editor/Meta.Voice.Hub.Editor.asmdef using Guid(a4f6d7d3afe393a4c8034af2ef0f36a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'c85273e505a44135d08e147d628973ba') in 0.000858 seconds
+  Time since last request: 0.000018 seconds.
+  path: Assets/MR_Lab5_Shaders/PixelShader 1.shader
+  artifactKey: Guid(eb1ded9f2e12d844ca1d405e8dfc4c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PixelShader 1.shader using Guid(eb1ded9f2e12d844ca1d405e8dfc4c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '65135fe2d4c8f96c2504a9433d068e5e') in 0.001360 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000101 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Lib/third-party/NLayer/Meta.Voice.NLayer.asmdef
-  artifactKey: Guid(178a04d1aea23a54397e644d4bbcad6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Lib/third-party/NLayer/Meta.Voice.NLayer.asmdef using Guid(178a04d1aea23a54397e644d4bbcad6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '644cb71c1fb0b1764ece39328096b574') in 0.000592 seconds
+  Time since last request: 0.751519 seconds.
+  path: Assets/MR_Lab5_Shaders/PixelShader 2.shader
+  artifactKey: Guid(5987acb11fdbce44593e8b1cb201f04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PixelShader 2.shader using Guid(5987acb11fdbce44593e8b1cb201f04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1a1138f78b0e19504d1458e2a0074a34') in 0.001305 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.004147 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Lib/third-party/UnityOpus/Scripts/Runtime/Meta.Voice.Opus.asmdef
-  artifactKey: Guid(1950dd5daebc49d6ae3584a249122e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Lib/third-party/UnityOpus/Scripts/Runtime/Meta.Voice.Opus.asmdef using Guid(1950dd5daebc49d6ae3584a249122e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '6d59b64182dc3d37a5d75acaa8d19685') in 0.000597 seconds
+  Time since last request: 0.968657 seconds.
+  path: Assets/MR_Lab5_Shaders/PixelShader 3.shader
+  artifactKey: Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PixelShader 3.shader using Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '95e94e437dec6f6ae1e6f99efd166926') in 0.001277 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005732 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Lib/VoiceHub/Scripts/Editor/Meta.Voice.VSDKHub.Editor.asmdef
-  artifactKey: Guid(fb19304c87f76694ca2d792da1915efe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Lib/VoiceHub/Scripts/Editor/Meta.Voice.VSDKHub.Editor.asmdef using Guid(fb19304c87f76694ca2d792da1915efe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '8d4460d8cc54483e04353ade84689636') in 0.000567 seconds
+  Time since last request: 26.861103 seconds.
+  path: Assets/MR_Lab5_Shaders/TextureBlendShader.shader
+  artifactKey: Guid(eb1ded9f2e12d844ca1d405e8dfc4c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/TextureBlendShader.shader using Guid(eb1ded9f2e12d844ca1d405e8dfc4c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '20c382c3318c40bf58401f7b859b8397') in 0.001410 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.006224 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Scripts/Runtime/Lib/Mic/Common/Meta.VoiceSDK.Mic.Common.asmdef
-  artifactKey: Guid(92a2c14febc027049bf15fe8da646123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Scripts/Runtime/Lib/Mic/Common/Meta.VoiceSDK.Mic.Common.asmdef using Guid(92a2c14febc027049bf15fe8da646123) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '10468ec42e1389059d212d89c06e1ef6') in 0.000677 seconds
+  Time since last request: 133.736234 seconds.
+  path: Assets/MR_Lab5_Shaders/TextureBlendShader.shader
+  artifactKey: Guid(eb1ded9f2e12d844ca1d405e8dfc4c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/TextureBlendShader.shader using Guid(eb1ded9f2e12d844ca1d405e8dfc4c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3f9466805335917e0f5bedbdc7a724e2') in 0.001476 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.006542 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Scripts/Runtime/Lib/Mic/Other/Meta.VoiceSDK.Mic.Other.asmdef
-  artifactKey: Guid(3e75c68ea2ce130409f7b96ae2110237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Scripts/Runtime/Lib/Mic/Other/Meta.VoiceSDK.Mic.Other.asmdef using Guid(3e75c68ea2ce130409f7b96ae2110237) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'a5052e547b2fa26c1dea24d2be64134c') in 0.000652 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.005904 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Scripts/Runtime/Lib/Mic/WebGL/Meta.VoiceSDK.Mic.WebGL.asmdef
-  artifactKey: Guid(aa2e2e88060c9fd4a81dab2812b7c8f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Scripts/Runtime/Lib/Mic/WebGL/Meta.VoiceSDK.Mic.WebGL.asmdef using Guid(aa2e2e88060c9fd4a81dab2812b7c8f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'd5ed747627ff502d156c288bd5e13ca4') in 0.000645 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.005179 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Scripts/Runtime/Meta.Wit.asmdef
-  artifactKey: Guid(4504b1a6e0fdcc3498c30b266e4a63bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Lib/Wit.ai/Scripts/Runtime/Meta.Wit.asmdef using Guid(4504b1a6e0fdcc3498c30b266e4a63bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'd540f7e650f709d5d7837ba689573755') in 0.000634 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.004853 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Features/Composer/Composer/Lib/Wit.ai/Features/composer/Scripts/Runtime/Meta.Wit.Composer.asmdef
-  artifactKey: Guid(3493d9e5383e8684b8bcdcd4d6b3659b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Features/Composer/Composer/Lib/Wit.ai/Features/composer/Scripts/Runtime/Meta.Wit.Composer.asmdef using Guid(3493d9e5383e8684b8bcdcd4d6b3659b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '502b51d942f04d4e3747e06ebc2b2ad2') in 0.000597 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.004256 seconds.
-  path: Packages/com.meta.xr.sdk.voice/Features/Composer/Composer/Lib/Wit.ai/Features/composer/Scripts/Editor/Meta.Wit.Composer.Editor.asmdef
-  artifactKey: Guid(35f1556a957b34819bf5db6be8e01b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.voice/Features/Composer/Composer/Lib/Wit.ai/Features/composer/Scripts/Editor/Meta.Wit.Composer.Editor.asmdef using Guid(35f1556a957b34819bf5db6be8e01b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '3f9ff6ebfb40ef3c110f49f137210795') in 0.000680 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.484996 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/Guide/Meta.XR.Guides.Editor.asmdef
-  artifactKey: Guid(20fd4e76c6b382c4192a75d60d32629d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/Guide/Meta.XR.Guides.Editor.asmdef using Guid(20fd4e76c6b382c4192a75d60d32629d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '234731533045f1087066e2901d94d574') in 0.000614 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.005556 seconds.
-  path: Packages/com.meta.xr.sdk.core/Scripts/ImmersiveDebugger/Meta.XR.ImmersiveDebugger.asmdef
-  artifactKey: Guid(96da0cd3d657b1348984ab291582cb0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Scripts/ImmersiveDebugger/Meta.XR.ImmersiveDebugger.asmdef using Guid(96da0cd3d657b1348984ab291582cb0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '4b44be80233ca4725e56d060bf487ee1') in 0.000585 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.005472 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/ImmersiveDebugger/Meta.XR.ImmersiveDebugger.Editor.asmdef
-  artifactKey: Guid(c5985707160d3064ea1492170d6e8c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/ImmersiveDebugger/Meta.XR.ImmersiveDebugger.Editor.asmdef using Guid(c5985707160d3064ea1492170d6e8c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '05ee7e49a5b7383353335ab0baf5b60a') in 0.000712 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.005759 seconds.
-  path: Packages/com.meta.xr.sdk.core/Scripts/ImmersiveDebugger/Interface/Meta.XR.ImmersiveDebugger.Interface.asmdef
-  artifactKey: Guid(9d4113f2273046f0a13e0c42644ff134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Scripts/ImmersiveDebugger/Interface/Meta.XR.ImmersiveDebugger.Interface.asmdef using Guid(9d4113f2273046f0a13e0c42644ff134) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '8241a7ac0150ad53399e3d46740da4d9') in 0.000651 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.023197 seconds.
-  path: Packages/com.meta.xr.sdk.interaction/Runtime/Sample/Objects/Environment/Locomotion/Textures/LocomotionRoom/MetaLocomotionGarden.png
-  artifactKey: Guid(652fc6d4afa37124abc42063502c1b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.interaction/Runtime/Sample/Objects/Environment/Locomotion/Textures/LocomotionRoom/MetaLocomotionGarden.png using Guid(652fc6d4afa37124abc42063502c1b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+  Time since last request: 20.344166 seconds.
+  path: Assets/MR_Lab5_Shaders/PulsatingColourMaterial 1.mat
+  artifactKey: Guid(93e7ad17100d1824198c0a103dd34d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PulsatingColourMaterial 1.mat using Guid(93e7ad17100d1824198c0a103dd34d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '1dae8f2018eaef1268088189612ec6eb') in 0.061423 seconds
+ -> (artifact id: 'aa6d0dd8f81d4a189ec6837a0ffc2e45') in 0.042813 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 28.040467 seconds.
-  path: Packages/com.meta.xr.mrutilitykit/Core/Prefabs/FindSpawnPositionsTile.prefab
-  artifactKey: Guid(7cab184fcd1d83f42bed80f9db3e36ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.mrutilitykit/Core/Prefabs/FindSpawnPositionsTile.prefab using Guid(7cab184fcd1d83f42bed80f9db3e36ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+  Time since last request: 21.156021 seconds.
+  path: Assets/MR_Lab5_Shaders/PixelBlendMaterial.mat
+  artifactKey: Guid(93e7ad17100d1824198c0a103dd34d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PixelBlendMaterial.mat using Guid(93e7ad17100d1824198c0a103dd34d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'b97c2f00dc7649bd71eec358be870151') in 0.048943 seconds
+ -> (artifact id: 'd027818fe579d2f216ec2a793e5752cb') in 0.008152 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 7
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Packages/com.meta.xr.mrutilitykit/Core/Prefabs/Volume.prefab
-  artifactKey: Guid(dfff1e4788f2a254884af1afd751f597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.mrutilitykit/Core/Prefabs/Volume.prefab using Guid(dfff1e4788f2a254884af1afd751f597) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+  Time since last request: 63.326045 seconds.
+  path: Assets/MR_Lab5_Shaders/BasicColourMaterial 1.mat
+  artifactKey: Guid(2824763f89caae549bc78b48567662e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/BasicColourMaterial 1.mat using Guid(2824763f89caae549bc78b48567662e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'd53f8e6f6fa3c8b14dffd05ca99c8693') in 0.040067 seconds
+ -> (artifact id: 'c2af13e2b169049ee98fcdf159ffcfe1') in 0.028071 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Packages/com.meta.xr.mrutilitykit/Core/Prefabs/OTHER.prefab
-  artifactKey: Guid(8ed49c689672d2c499bdc54d3c234b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.mrutilitykit/Core/Prefabs/OTHER.prefab using Guid(8ed49c689672d2c499bdc54d3c234b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+  Time since last request: 25.859222 seconds.
+  path: Assets/MR_Lab5_Shaders/PerpixelLightingMaterial.mat
+  artifactKey: Guid(2824763f89caae549bc78b48567662e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PerpixelLightingMaterial.mat using Guid(2824763f89caae549bc78b48567662e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'de26fb11dadc700d3845fa89a5e6ace5') in 0.040857 seconds
+ -> (artifact id: '9abc39fb63a3f1a081e1677ef05f32cc') in 0.007436 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 18.381701 seconds.
+  path: Assets/MR_Lab5_Shaders/Per-Pixel_Lighting.shader
+  artifactKey: Guid(5987acb11fdbce44593e8b1cb201f04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/Per-Pixel_Lighting.shader using Guid(5987acb11fdbce44593e8b1cb201f04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3ff945a6e8072ea2e15c0a64eeab5453') in 0.001550 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 619.127949 seconds.
+  path: Assets/MR_Lab5_Shaders/Per-Pixel_Lighting.shader
+  artifactKey: Guid(5987acb11fdbce44593e8b1cb201f04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/Per-Pixel_Lighting.shader using Guid(5987acb11fdbce44593e8b1cb201f04e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '675af42db814091d4b2f38536c38c9e7') in 0.001876 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 202.896548 seconds.
+  path: Assets/MR_Lab5_Shaders/NormalsShader.shader
+  artifactKey: Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/NormalsShader.shader using Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e41b5dddce8035931dd4e80e0a770ca4') in 0.001670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 131.322454 seconds.
+  path: Assets/MR_Lab5_Shaders/NormalsShader.shader
+  artifactKey: Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/NormalsShader.shader using Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5fa28899f64ce34bd5f718abfc611fe5') in 0.001797 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 72.365755 seconds.
+  path: Assets/MR_Lab5_Shaders/PerpixelLightingMaterial.mat
+  artifactKey: Guid(2824763f89caae549bc78b48567662e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/PerpixelLightingMaterial.mat using Guid(2824763f89caae549bc78b48567662e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '89d0c8843b38687bd72e729c7196b36b') in 0.040757 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 8.286854 seconds.
+  path: Assets/MR_Lab5_Shaders/NormalsMaterial.mat
+  artifactKey: Guid(eda791ec704f68b4aa04e7030c5949fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/NormalsMaterial.mat using Guid(eda791ec704f68b4aa04e7030c5949fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '172dd0d8516b624b9bdc63643bd9e18d') in 0.026011 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 34.658665 seconds.
+  path: Assets/MR_Lab5_Shaders/NormalsShader.shader
+  artifactKey: Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/NormalsShader.shader using Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b16b46598f1b785918adbbab116e57e8') in 0.001522 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 103.352421 seconds.
+  path: Assets/MR_Lab5_Shaders/NormalsShader.shader
+  artifactKey: Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/NormalsShader.shader using Guid(f25a1e4076ac813498d0a7564260fd3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8f56d65568ce343ea3b9f4f61958489d') in 0.001482 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 7.576154 seconds.
+  path: Assets/MR_Lab5_Shaders/NormalsMaterial.mat
+  artifactKey: Guid(eda791ec704f68b4aa04e7030c5949fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MR_Lab5_Shaders/NormalsMaterial.mat using Guid(eda791ec704f68b4aa04e7030c5949fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '484a280703e965f907b9bf4f8af721f9') in 0.038310 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
