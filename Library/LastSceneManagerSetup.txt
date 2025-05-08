@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SpatialAnchorsLabs0.unity
+- path: Assets/Scenes/MR-Lab5-HLSL.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

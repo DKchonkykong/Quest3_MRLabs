@@ -15,7 +15,7 @@ C:/Users/806395/Workspace/Quest3_MRLabs
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56122
+57969
 Successfully changed project path to: C:/Users/806395/Workspace/Quest3_MRLabs
 C:/Users/806395/Workspace/Quest3_MRLabs
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,14 +49,14 @@ C:/Users/806395/Workspace/Quest3_MRLabs
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3296] Host "[IP] 10.140.9.73 [Port] 0 [Flags] 2 [Guid] 1795159433 [EditorId] 1795159433 [Version] 1048832 [Id] WindowsEditor(7,RB-335-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [22288] Host "[IP] 10.140.9.73 [Port] 0 [Flags] 2 [Guid] 2481282147 [EditorId] 2481282147 [Version] 1048832 [Id] WindowsEditor(7,RB-335-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3296] Host "[IP] 10.140.9.73 [Port] 0 [Flags] 2 [Guid] 1795159433 [EditorId] 1795159433 [Version] 1048832 [Id] WindowsEditor(7,RB-335-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22288] Host "[IP] 10.140.9.73 [Port] 0 [Flags] 2 [Guid] 2481282147 [EditorId] 2481282147 [Version] 1048832 [Id] WindowsEditor(7,RB-335-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-Refreshing native plugins compatible for Editor in 582.14 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 18.85 ms, found 10 plugins.
 Unity memory allocator detected: MetaXRAudio native memory allocations will be tracked.
-Preloading 3 native plugins for Editor in 4.83 ms.
+Preloading 3 native plugins for Editor in 4.28 ms.
 Initialize engine version: 2022.3.36f1 (95a4219250e5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/806395/Workspace/Quest3_MRLabs/Assets
@@ -73,51 +73,51 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56464
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56680
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.020259 seconds.
-- Loaded All Assemblies, in  0.407 seconds
+Registered in 0.017434 seconds.
+- Loaded All Assemblies, in  0.362 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 670 ms
+Android Extension - Scanning For ADB Devices 537 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.033 seconds
-Domain Reload Profiling: 1436ms
-	BeginReloadAssembly (136ms)
+- Finished resetting the current domain, in  0.848 seconds
+Domain Reload Profiling: 1207ms
+	BeginReloadAssembly (101ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (74ms)
-	LoadAllAssembliesAndSetupDomain (151ms)
-		LoadAssemblies (134ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (150ms)
+		LoadAssemblies (99ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (148ms)
-			TypeCache.Refresh (147ms)
-				TypeCache.ScanAssembly (133ms)
+		AnalyzeDomain (147ms)
+			TypeCache.Refresh (146ms)
+				TypeCache.ScanAssembly (132ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (1033ms)
+	FinalizeReload (848ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (979ms)
+		SetupLoadedEditorAssemblies (798ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (806ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (652ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (113ms)
-			ProcessInitializeOnLoadMethodAttributes (52ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (98ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -126,8 +126,8 @@ Domain Reload Profiling: 1436ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  7.920 seconds
-Refreshing native plugins compatible for Editor in 17.35 ms, found 10 plugins.
+- Loaded All Assemblies, in  0.533 seconds
+Refreshing native plugins compatible for Editor in 15.26 ms, found 10 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
@@ -329,49 +329,49 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.373 seconds
-Domain Reload Profiling: 9282ms
-	BeginReloadAssembly (139ms)
+- Finished resetting the current domain, in  0.847 seconds
+Domain Reload Profiling: 1373ms
+	BeginReloadAssembly (137ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (20ms)
-	RebuildCommonClasses (29ms)
+	RebuildCommonClasses (30ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (7691ms)
-		LoadAssemblies (7649ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (312ms)
+		LoadAssemblies (270ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (127ms)
-			TypeCache.Refresh (88ms)
-				TypeCache.ScanAssembly (70ms)
-			ScanForSourceGeneratedMonoScriptInfo (26ms)
+		AnalyzeDomain (123ms)
+			TypeCache.Refresh (85ms)
+				TypeCache.ScanAssembly (69ms)
+			ScanForSourceGeneratedMonoScriptInfo (25ms)
 			ResolveRequiredComponents (13ms)
-	FinalizeReload (1374ms)
+	FinalizeReload (848ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1188ms)
+		SetupLoadedEditorAssemblies (660ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (31ms)
+			InitializePlatformSupportModulesInManaged (29ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (85ms)
-			ProcessInitializeOnLoadAttributes (1019ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (503ms)
+			ProcessInitializeOnLoadMethodAttributes (31ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+		AwakeInstancesAfterBackupRestoration (8ms)
 Shader 'Meta/MRUK/Scene/HighlightsAndShadows': fallback shader 'Off' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 17.80 ms, found 10 plugins.
-Preloading 3 native plugins for Editor in 0.23 ms.
-Unloading 3167 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 62 unused Assets / (482.3 KB). Loaded Objects now: 3598.
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 15.40 ms, found 10 plugins.
+Preloading 3 native plugins for Editor in 0.22 ms.
+Unloading 3168 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 62 unused Assets / (490.8 KB). Loaded Objects now: 3599.
 Memory consumption went from 167.3 MB to 166.8 MB.
-Total: 5.517400 ms (FindLiveObjects: 0.274400 ms CreateObjectMapping: 0.252700 ms MarkObjects: 4.733400 ms  DeleteObjects: 0.256000 ms)
+Total: 5.458100 ms (FindLiveObjects: 0.257600 ms CreateObjectMapping: 0.218400 ms MarkObjects: 4.714500 ms  DeleteObjects: 0.266800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -389,156 +389,712 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 21671.241975 seconds.
-  path: Assets/SpecialAnchorLabs
-  artifactKey: Guid(e76fb9c4616a9ab42a0a425437e80d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpecialAnchorLabs using Guid(e76fb9c4616a9ab42a0a425437e80d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '7ff03b543176a594b52518be26ab20c9') in 0.002315 seconds
+  Time since last request: 24336.219732 seconds.
+  path: Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs
+  artifactKey: Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs using Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e20405efad0d862418c07770b9c801d6') in 0.002899 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 10.504096 seconds.
-  path: Assets/Scenes/SpatialAnchorsLabs0.unity
-  artifactKey: Guid(990a805f307f42741a49980bde6d0616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SpatialAnchorsLabs0.unity using Guid(990a805f307f42741a49980bde6d0616) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '1d7c0e5c71866179e83a96f57bc72a1e') in 0.000490 seconds
+  Time since last request: 856.039345 seconds.
+  path: Packages/com.meta.xr.sdk.core/Scripts/OVRSpatialAnchor.cs
+  artifactKey: Guid(34e0461a4939d3b4fbdf706bbd80108c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.meta.xr.sdk.core/Scripts/OVRSpatialAnchor.cs using Guid(34e0461a4939d3b4fbdf706bbd80108c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5c32cb279947ead753a24efa3479c17d') in 0.000757 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 71.511072 seconds.
-  path: Packages/com.unity.xr.core-utils/Editor/Resources/BuildingBlockOverlay.uss
-  artifactKey: Guid(45e5e12ffcaf7fe4181677c973b8e373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.xr.core-utils/Editor/Resources/BuildingBlockOverlay.uss using Guid(45e5e12ffcaf7fe4181677c973b8e373) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '31898cfb9ce03f8d7ea50c313e828f10') in 0.018149 seconds
+  Time since last request: 0.624270 seconds.
+  path: Packages/com.meta.xr.sdk.core/Scripts/OVRSpatialAnchor.deprecated.cs
+  artifactKey: Guid(9387c39cb5be4321b00df1d7c4a27cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.meta.xr.sdk.core/Scripts/OVRSpatialAnchor.deprecated.cs using Guid(9387c39cb5be4321b00df1d7c4a27cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '1dbc2802f9b36e65e1f970bce84c523d') in 0.000546 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.006472 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay.png
-  artifactKey: Guid(6a986a181c9bc6043b057a3d15edbaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay.png using Guid(6a986a181c9bc6043b057a3d15edbaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'd532df9855fc31957b025bda06e05627') in 0.065278 seconds
+  Time since last request: 557.907231 seconds.
+  path: Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs
+  artifactKey: Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs using Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '7e9cf8b3704d4f823d2435b9cc9afb1b') in 0.000716 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.028310 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@2x.png
-  artifactKey: Guid(a206ff0ddc681e642a2e62fc57a7d51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@2x.png using Guid(a206ff0ddc681e642a2e62fc57a7d51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '1162ef79ed502cb8bdafca2bd0a24315') in 0.039106 seconds
+  Time since last request: 862.293857 seconds.
+  path: Assets/SpecialAnchorLabs/ObjectSpawner.cs
+  artifactKey: Guid(55c94a75fc5799c4d8e56ec8a6af19b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/ObjectSpawner.cs using Guid(55c94a75fc5799c4d8e56ec8a6af19b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '5b908d102f2cd3c7871ea6689c4d06fd') in 0.000896 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@16.png
-  artifactKey: Guid(96c9a57d95a712d44978703ea9dd7f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@16.png using Guid(96c9a57d95a712d44978703ea9dd7f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'a18c8f1b9f2e8253bd3dfe0a1b89d834') in 0.007746 seconds
+  Time since last request: 419.043561 seconds.
+  path: Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs
+  artifactKey: Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs using Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ad723ba898caa2719dcf21fe384083e8') in 0.000740 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@64.png
-  artifactKey: Guid(b3cd430fb0ffe164fa829262bb9e1d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@64.png using Guid(b3cd430fb0ffe164fa829262bb9e1d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '7e107d2204a57902c1cefe3932e86cf3') in 0.021320 seconds
+  Time since last request: 45.271916 seconds.
+  path: Assets/SpecialAnchorLabs/ObjectSpawner.cs
+  artifactKey: Guid(55c94a75fc5799c4d8e56ec8a6af19b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/ObjectSpawner.cs using Guid(55c94a75fc5799c4d8e56ec8a6af19b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'f20a42a5ed1e2051558dd82cbaaca997') in 0.000504 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 36.751940 seconds.
-  path: Packages/com.meta.xr.sdk.core/Resources/OVRMRChromaKey.cginc
-  artifactKey: Guid(680577023e93e564c9b00f18b0164afa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Resources/OVRMRChromaKey.cginc using Guid(680577023e93e564c9b00f18b0164afa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '0c53b9b2bdf7ae45b0c2e388352a9a4c') in 0.001272 seconds
+  Time since last request: 15.343885 seconds.
+  path: Assets/SpecialAnchorLabs/ObjectSpawner.cs
+  artifactKey: Guid(55c94a75fc5799c4d8e56ec8a6af19b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/ObjectSpawner.cs using Guid(55c94a75fc5799c4d8e56ec8a6af19b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '82043be13cac7ab124b75217de4d3517') in 0.000498 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 226.427559 seconds.
-  path: Packages/com.meta.xr.mrutilitykit/Editor/BuildingBlocks/AnchorPrefabSpawner/AnchorPrefabSpawner.asset
-  artifactKey: Guid(623b104cd493ee44fa60f56917e79184) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.mrutilitykit/Editor/BuildingBlocks/AnchorPrefabSpawner/AnchorPrefabSpawner.asset using Guid(623b104cd493ee44fa60f56917e79184) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '7379af391617ccb2d17d0b5f69e06121') in 0.020721 seconds
+  Time since last request: 301.413293 seconds.
+  path: Assets/object_spawner.cs
+  artifactKey: Guid(875225c4d45270641849dde48ce3b46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/object_spawner.cs using Guid(875225c4d45270641849dde48ce3b46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '770d75a4dbf555404020374860a3acde') in 0.000640 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Packages/com.meta.xr.mrutilitykit/Editor/BuildingBlocks/AnchorPrefabSpawner/AnchorPrefabSpawnerInstallationRoutine.asset
-  artifactKey: Guid(8a72b16412872db48839282e6048c12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.mrutilitykit/Editor/BuildingBlocks/AnchorPrefabSpawner/AnchorPrefabSpawnerInstallationRoutine.asset using Guid(8a72b16412872db48839282e6048c12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'b6982206e1461234af98fabe16918b87') in 0.043037 seconds
+  Time since last request: 0.709121 seconds.
+  path: Assets/objectSpawner.cs
+  artifactKey: Guid(3525664e74707724cb256bf880816b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objectSpawner.cs using Guid(3525664e74707724cb256bf880816b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '9f58a1adbf231c91bff59af6105acf0c') in 0.000512 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 37
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.499775 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SpatialAudio/Textures/bb_thumbnail_spatialaudio.png
-  artifactKey: Guid(ece7f22ca0181924187420a1fcc92263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SpatialAudio/Textures/bb_thumbnail_spatialaudio.png using Guid(ece7f22ca0181924187420a1fcc92263) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '5fb4ed84771a19af53d8b2e652ea1210') in 0.027005 seconds
+  Time since last request: 23.596329 seconds.
+  path: Assets/objectSpawner.cs
+  artifactKey: Guid(3525664e74707724cb256bf880816b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objectSpawner.cs using Guid(3525664e74707724cb256bf880816b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c466f738e1b6c60c87c35bd757fd8dad') in 0.000507 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.048185 seconds.
-  path: Packages/com.meta.xr.mrutilitykit/Editor/BuildingBlocks/FindSpawnPositions/Textures/findSpawnPositions.png
-  artifactKey: Guid(b5c5be7e0b904844aa95ba4b9a80d254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.mrutilitykit/Editor/BuildingBlocks/FindSpawnPositions/Textures/findSpawnPositions.png using Guid(b5c5be7e0b904844aa95ba4b9a80d254) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'a2d5b7670bb6e85185a263ee218e1d17') in 0.030153 seconds
+  Time since last request: 37.160331 seconds.
+  path: Assets/objects_pawner.cs
+  artifactKey: Guid(eca856151b238784f8424f39c57c4ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objects_pawner.cs using Guid(eca856151b238784f8424f39c57c4ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd1da6522d2716d763077a1b3c6c01b1c') in 0.000606 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.810021 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SampleSpatialAnchorController/SampleSpatialAnchorController.asset
-  artifactKey: Guid(8d2a1f43f6f72ea498085459c9a1f009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SampleSpatialAnchorController/SampleSpatialAnchorController.asset using Guid(8d2a1f43f6f72ea498085459c9a1f009) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'f4774f4d1b3941bf922f17b3dc1bead5') in 0.019128 seconds
+  Time since last request: 7.811602 seconds.
+  path: Assets/objects_pawner.cs
+  artifactKey: Guid(eca856151b238784f8424f39c57c4ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objects_pawner.cs using Guid(eca856151b238784f8424f39c57c4ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ab9a4130c339d1d17aa3eb05b17ef484') in 0.000587 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 33
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.057869 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SharedSpatialAnchorCore/SharedSpatialAnchorCore.asset
-  artifactKey: Guid(7535c0b69b4f32447b2c1e097fcac95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SharedSpatialAnchorCore/SharedSpatialAnchorCore.asset using Guid(7535c0b69b4f32447b2c1e097fcac95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '445cf76c38d12c02380194e257cda545') in 0.082819 seconds
+  Time since last request: 138.638523 seconds.
+  path: Assets/ObjectSpawner.cs
+  artifactKey: Guid(3525664e74707724cb256bf880816b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ObjectSpawner.cs using Guid(3525664e74707724cb256bf880816b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'fc2257979fb5f009956dcfab9004532e') in 0.000649 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 43
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SharedSpatialAnchorCore/Prefabs/SharedSpatialAnchorCore.prefab
-  artifactKey: Guid(7bc8dfffd9922b94ba33926c8a808719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SharedSpatialAnchorCore/Prefabs/SharedSpatialAnchorCore.prefab using Guid(7bc8dfffd9922b94ba33926c8a808719) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'dfcf26ca2abbef9e2de1fc70c592af9f') in 0.012249 seconds
+  Time since last request: 53.004526 seconds.
+  path: Assets/StreamingAssets
+  artifactKey: Guid(784854de57984554ca5efdda64344914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StreamingAssets using Guid(784854de57984554ca5efdda64344914) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e1ad937a8b7e71b8f1d6ee6d832cce1b') in 0.000510 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 42
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SpatialAnchorCore/SpatialAnchorCore.asset
-  artifactKey: Guid(711d9f5ab2b1e994794a547219b115a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.meta.xr.sdk.core/Editor/BuildingBlocks/BlockData/SpatialAnchorCore/SpatialAnchorCore.asset using Guid(711d9f5ab2b1e994794a547219b115a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '403fdcd1cd04eec7c9d882aa5b26fc1e') in 0.016661 seconds
+  Time since last request: 60.689734 seconds.
+  path: Assets/SpecialAnchorLabs/Object_Spawner.cs
+  artifactKey: Guid(b50335faecada6b44834525cac3dda30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/Object_Spawner.cs using Guid(b50335faecada6b44834525cac3dda30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '475c221d512813df0a74b09858ec7603') in 0.000677 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 19.563418 seconds.
+  path: Assets/SpecialAnchorLabs/Object_Spawner.cs
+  artifactKey: Guid(b50335faecada6b44834525cac3dda30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/Object_Spawner.cs using Guid(b50335faecada6b44834525cac3dda30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'e287f527d5d675be677a140930501822') in 0.000546 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 192.037109 seconds.
+  path: Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs
+  artifactKey: Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs using Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '6114c272fc77160f2b2a4bac658d812c') in 0.000550 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 136.070220 seconds.
+  path: Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs
+  artifactKey: Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs using Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c8a19d7c8f94b7c52ced51c8c1734547') in 0.000684 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.462 seconds
+Refreshing native plugins compatible for Editor in 16.52 ms, found 10 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Synthetic Environments] got match start synth_env_server.exe Bedroom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server.exe GameRoom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server.exe LivingRoom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom2_3
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom2_4
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom5_6
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom5_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom3_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_2
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_4
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.2.0\Runtime\OculusLoader.cs:298 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0008c] in .\Library\PackageCache\com.unity.xr.oculus@4.2.0\Runtime\OculusLoader.cs:283 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <51fded79cd284d4d911c5949aff4cb21>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <51fded79cd284d4d911c5949aff4cb21>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <51fded79cd284d4d911c5949aff4cb21>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <2201ab87e660427c974282df3bb3cf36>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  5.514 seconds
+Domain Reload Profiling: 5968ms
+	BeginReloadAssembly (153ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (234ms)
+		LoadAssemblies (288ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (31ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (5514ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (517ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (31ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (87ms)
+			ProcessInitializeOnLoadAttributes (353ms)
+			ProcessInitializeOnLoadMethodAttributes (28ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Shader 'Meta/MRUK/Scene/HighlightsAndShadows': fallback shader 'Off' not found
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 17.31 ms, found 10 plugins.
+Preloading 3 native plugins for Editor in 0.25 ms.
+Unloading 3058 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 52 unused Assets / (470.8 KB). Loaded Objects now: 3601.
+Memory consumption went from 141.7 MB to 141.3 MB.
+Total: 5.635200 ms (FindLiveObjects: 0.258200 ms CreateObjectMapping: 0.241400 ms MarkObjects: 4.880500 ms  DeleteObjects: 0.254100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.475 seconds
+Refreshing native plugins compatible for Editor in 15.92 ms, found 10 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Synthetic Environments] got match start synth_env_server.exe Bedroom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server.exe GameRoom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server.exe LivingRoom
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom2_3
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom2_4
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom5_6
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom5_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom3_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_2
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_1
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Synthetic Environments] got match start synth_env_server_extra_rooms.exe XRoom1_4
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Meta.XR.Simulator.Utils:ReportInfo (string,string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs:165)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:ParseSynthEnvScript (string) (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:98)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Installer:BuildSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Installer.cs:76)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:RegisterSyntheticEnvironments () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:97)
+Meta.XR.Simulator.Editor.SyntheticEnvironments.Registry:.cctor () (at ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/SyntheticEnvironments/Registry.cs:87)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.meta.xr.simulator@74.0.0/Editor/Utils.cs Line: 165)
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.2.0\Runtime\OculusLoader.cs:298 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0008c] in .\Library\PackageCache\com.unity.xr.oculus@4.2.0\Runtime\OculusLoader.cs:283 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <51fded79cd284d4d911c5949aff4cb21>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <51fded79cd284d4d911c5949aff4cb21>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <51fded79cd284d4d911c5949aff4cb21>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <2201ab87e660427c974282df3bb3cf36>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  5.764 seconds
+Domain Reload Profiling: 6231ms
+	BeginReloadAssembly (155ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (241ms)
+		LoadAssemblies (295ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (32ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (5765ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (516ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (31ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (352ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Shader 'Meta/MRUK/Scene/HighlightsAndShadows': fallback shader 'Off' not found
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 17.83 ms, found 10 plugins.
+Preloading 3 native plugins for Editor in 0.22 ms.
+Unloading 3059 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 52 unused Assets / (470.9 KB). Loaded Objects now: 3602.
+Memory consumption went from 142.0 MB to 141.5 MB.
+Total: 5.611500 ms (FindLiveObjects: 0.263800 ms CreateObjectMapping: 0.219400 ms MarkObjects: 4.855100 ms  DeleteObjects: 0.272500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Import Request.
+  Time since last request: 578.413977 seconds.
+  path: Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs
+  artifactKey: Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/AnchorTutorialUIManager.cs using Guid(0af10108143105d40b52f35dae649775) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'c3e9df55e2d9c667460db4a0818b9239') in 0.007455 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.877754 seconds.
+  path: Assets/SpecialAnchorLabs/Object_Spawner.cs
+  artifactKey: Guid(b50335faecada6b44834525cac3dda30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialAnchorLabs/Object_Spawner.cs using Guid(b50335faecada6b44834525cac3dda30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3f667568ceb0280a8c1da30f707194f5') in 0.000543 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
