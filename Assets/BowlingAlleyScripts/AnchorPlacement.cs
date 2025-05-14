@@ -12,11 +12,15 @@ public class AnchorPlacement : MonoBehaviour
         {
             CreateSpatialAnchor();
         }        
-}
+    }
 
-public void CreateSpatialAnchor()
-{
-GameObject prefab = Instantiate(acnhorPrefab, OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch), OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch));
+    public void CreateSpatialAnchor()
+    {
+        GameObject prefab = Instantiate(
+            acnhorPrefab, 
+            OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch), 
+            Quaternion.identity // Use Quaternion.identity for no rotation
+        );
         prefab.AddComponent<OVRSpatialAnchor>();
     }
 }
