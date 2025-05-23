@@ -6,26 +6,31 @@ using Oculus.Platform.Models;
 
 public class BowlingAlleyLoader : MonoBehaviour
 {
-
     public GameObject Bowling_Alley;
     public float distanceFromUser = 3.0f;
     public float heightOffset = -0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
         LoadAlleyRelativeToUser();
     }
 
-void LoadAlleyRelativeToUser()
-{
-    Transform cameraTransform = Camera.main.transform;
-    vector3 spawnPosition = cameraTransform.position + cameraTransform.forward * distanceFromUser;
+    void LoadAlleyRelativeToUser()
+    {
+        Transform cameraTransform = Camera.main.transform;
 
-    Quarternion spawnRotation = Quarternion.LookRotation(-cameraTransform.forward); 
+        // Corrected 'vector3' to 'Vector3'
+        Vector3 spawnPosition = cameraTransform.position + cameraTransform.forward * distanceFromUser;
+        spawnPosition.y += heightOffset;
 
-    GameObject alley = Instantiate(Bowling_Alley, spawnPosition, spawnRotation);
+        // Corrected 'Quarternion' to 'Quaternion'
+        Quaternion spawnRotation = Quaternion.LookRotation(-cameraTransform.forward);
 
-alley.name = "DynamicBowlingAlley";
+        // Instantiate the bowling alley
+        GameObject alley = Instantiate(Bowling_Alley, spawnPosition, spawnRotation);
 
-}
+        // Set the name of the instantiated object
+        alley.name = "DynamicBowlingAlley";
+    }
 }
