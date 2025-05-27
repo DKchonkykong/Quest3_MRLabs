@@ -88,27 +88,35 @@ public class NewBehaviourScript : MonoBehaviour
             EraseAllAnchors();
         }
     }
+    
+    public List<OVRSpatialAnchor> GetActiveAnchors()
+{
+    return _anchorInstances;
+}
 
     private async void SetupAnchorAsync(OVRSpatialAnchor anchor, bool saveAnchor)
+{
+    if (!await anchor.WhenLocalizedAsync())
     {
-        // Keep checking for a valid and localized anchor state
-        if (!await anchor.WhenLocalizedAsync())
-        {
-            Debug.LogError($"Unable to create anchor.");
-            Destroy(anchor.gameObject);
-            return;
-        }
+        Debug.LogError($"Unable to create anchor.");
+        Destroy(anchor.gameObject);
+        return;
+    }
 
-        // Add the anchor to the list of all instances
-        _anchorInstances.Add(anchor);
+    _anchorInstances.Add(anchor);
 
-        // save the savable (green) anchors only
-        if (saveAnchor && (await anchor.SaveAnchorAsync()).Success)
+    if (saveAnchor && (await anchor.SaveAnchorAsync()).Success)
+    {
+        _anchorUuids.Add(anchor.Uuid);
+
+        // Notify MRUKManager about the new anchor
+        MRUKManager manager = FindObjectOfType<MRUKManager>();
+        if (manager != null)
         {
-            // Remember UUID so you can load the anchor later
-            _anchorUuids.Add(anchor.Uuid);
+            manager.SaveAnchor(anchor.Uuid.ToString(), anchor.transform.position);
         }
     }
+}
 
     public async void LoadAllAnchors()
     {

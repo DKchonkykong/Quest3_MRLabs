@@ -3,34 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using Oculus.Platform;
 using Oculus.Platform.Models;
+using Meta.XR.MRUtilityKit; // Add this line
 
 public class BowlingAlleyLoader : MonoBehaviour
 {
     public GameObject Bowling_Alley;
+    public string anchorID = "BowlingAlleyAnchor";
     public float distanceFromUser = 3.0f;
-    public float heightOffset = -0.5f;
+    public LayerMask placementLayer;
+    public float maxDistance = 10.0f; // Define maxDistance
+    public Quaternion rotation = Quaternion.identity; // Default rotation
+
+    public bool placed = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        LoadAlleyRelativeToUser();
+        if (GameObject.Find(anchorID))
+        {
+            placed = true;
+        }
     }
 
-    void LoadAlleyRelativeToUser()
+    void Update() // Corrected method name
     {
-        Transform cameraTransform = Camera.main.transform;
+        if (!placed && OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+        {
+            PlaceLookableAlley();
+        }
+    }
 
-        // Corrected 'vector3' to 'Vector3'
-        Vector3 spawnPosition = cameraTransform.position + cameraTransform.forward * distanceFromUser;
-        spawnPosition.y += heightOffset;
+    void PlaceLookableAlley()
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, placementLayer))
+        {
+            GameObject alley = Instantiate(Bowling_Alley, hit.point, rotation);
+            alley.name = anchorID;
 
-        // Corrected 'Quarternion' to 'Quaternion'
-        Quaternion spawnRotation = Quaternion.LookRotation(-cameraTransform.forward);
+            // Add the MRUKAnchor component without setting non-existent properties
+            var anchor = alley.AddComponent<MRUKAnchor>();
 
-        // Instantiate the bowling alley
-        GameObject alley = Instantiate(Bowling_Alley, spawnPosition, spawnRotation);
+            // If additional functionality is needed, implement it here
+            // Example: Log or handle the anchor in some way
+            Debug.Log("MRUKAnchor added to the Bowling Alley object.");
 
-        // Set the name of the instantiated object
-        alley.name = "DynamicBowlingAlley";
+            placed = true;
+        }
+        else
+        {
+            Debug.Log("No Valid Surface found.");
+        }
     }
 }
