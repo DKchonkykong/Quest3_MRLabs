@@ -1,42 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Meta.XR.MRUtilityKit;
 
 public class SmartAlleyPlacer : MonoBehaviour
 {
-
-    public GameObject Bowling_Alley;
+    public GameObject bowlingAlleyPrefab;
     public float alleyLength = 10f;
     public float alleyWidth = 1.5f;
     public float padding = 0.5f;
+    public LayerMask obstacleLayer;
 
     private bool sceneReady = false;
     private bool hasPlaced = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Waiting for anchors to load...");
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        // Check if anchors are loaded
-        if (!sceneReady && MRUK.Instance.Rooms.Count > 0 && MRUK.Instance.Rooms[0].Anchors.Count > 0)
+        if (!sceneReady)
         {
-            sceneReady = true;
-            Debug.Log("Anchors loaded. Ready to place the bowling alley.");
+            if (MRUK.Instance != null && MRUK.Instance.SceneAnchors.Count > 0)
+            {
+                sceneReady = true;
+                Debug.Log("MRUK ready.");
+            }
+            return;
         }
 
-        // If scene is not ready or alley is already placed, return early
-        if (!sceneReady || hasPlaced)
-            return;
-
-        // Check for user input to place the alley
-        if (OVRInput.GetDown(OVRInput.Button.One)) // [A] button on controller
+        if (!hasPlaced && OVRInput.GetDown(OVRInput.Button.One))
         {
+            Debug.Log("[A] pressed. Attempting alley placement.");
             TryPlaceAlley();
         }
     }
@@ -44,43 +34,46 @@ public class SmartAlleyPlacer : MonoBehaviour
     void TryPlaceAlley()
     {
         MRUKAnchor bestAnchor = null;
-        float bestLength = 0f;
+        float bestArea = 0f;
 
-        foreach (var room in MRUK.Instance.Rooms)
+        foreach (var anchor in MRUK.Instance.SceneAnchors)
         {
-            foreach (var anchor in room.Anchors)
+            if (!anchor.HasAnyLabel(MRUKAnchor.SceneLabels.FLOOR) || !anchor.VolumeBounds.HasValue)
+                continue;
+
+            Bounds bounds = anchor.VolumeBounds.Value;
+            Vector3 size = bounds.size;
+
+            if (size.x < alleyWidth + padding || size.z < alleyLength + padding)
+                continue;
+
+            // Optional physical collision check
+            if (Physics.CheckBox(bounds.center, new Vector3(alleyWidth / 2, 1, alleyLength / 2), Quaternion.identity, obstacleLayer))
+                continue;
+
+            float area = size.x * size.z;
+            if (area > bestArea)
             {
-                if (!anchor.HasAnyLabel(MRUKAnchor.SceneLabels.FLOOR) || !anchor.VolumeBounds.HasValue)
-                    continue;
-
-                Vector3 size = anchor.VolumeBounds.Value.size;
-                float usableLength = Mathf.Max(size.x, size.z);
-
-                if (usableLength > bestLength && size.x >= alleyWidth + padding && size.z >= alleyLength + padding)
-                {
-                    bestLength = usableLength;
-                    bestAnchor = anchor;
-                }
+                bestAnchor = anchor;
+                bestArea = area;
             }
         }
 
         if (bestAnchor != null)
         {
-            Vector3 center = bestAnchor.GetAnchorCenter();
-            Vector3 size = bestAnchor.VolumeBounds.Value.size;
-            float scaleFactor = Mathf.Clamp(size.z / alleyLength, 0.5f, 2f);
+            Bounds bounds = bestAnchor.VolumeBounds.Value;
+            Vector3 position = bestAnchor.GetAnchorCenter();
+            Quaternion rotation = bounds.size.z >= bounds.size.x ? Quaternion.identity : Quaternion.Euler(0, 90, 0);
 
-            bool longIsZ = size.z >= size.x;
-            Quaternion rotation = longIsZ ? Quaternion.identity : Quaternion.Euler(0, 90, 0);
+            GameObject alley = Instantiate(bowlingAlleyPrefab, position, rotation);
+            alley.transform.localScale = Vector3.one * Mathf.Clamp(bounds.size.z / alleyLength, 0.5f, 2f);
 
-            GameObject alley = Instantiate(Bowling_Alley, center, rotation);
-            alley.transform.localScale = new Vector3(scaleFactor, 1f, scaleFactor);
             hasPlaced = true;
-            Debug.Log("Bowling Alley Placed and Scaled on floor.");
+            Debug.Log("Bowling alley placed.");
         }
         else
         {
-            Debug.LogError("Failed to place bowling alley: no suitable place anchor found.");
+            Debug.LogError("No suitable floor found. Alley not placed.");
         }
     }
 }
