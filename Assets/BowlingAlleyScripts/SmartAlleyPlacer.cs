@@ -48,8 +48,9 @@ public class SmartAlleyPlacer : MonoBehaviour
             if (size.x < alleyWidth + padding || size.z < alleyLength + padding)
                 continue;
 
-            // Optional physical collision check
-            if (Physics.CheckBox(bounds.Value.center, new Vector3(alleyWidth / 2, 1, alleyLength / 2), Quaternion.identity, obstacleLayer))
+            // Optional physical collision check for the center of the room
+            Vector3 center = bounds.Value.center;
+            if (Physics.CheckBox(center, new Vector3(alleyWidth / 2, 1, alleyLength / 2), Quaternion.identity, obstacleLayer))
                 continue;
 
             float area = size.x * size.z;
@@ -63,14 +64,14 @@ public class SmartAlleyPlacer : MonoBehaviour
         if (bestRoom != null)
         {
             Bounds bounds = CalculateRoomBounds(bestRoom).Value;
-            Vector3 position = bounds.center;
+            Vector3 position = bounds.center; // Use the center of the room
             Quaternion rotation = bounds.size.z >= bounds.size.x ? Quaternion.identity : Quaternion.Euler(0, 90, 0);
 
             GameObject alley = Instantiate(bowlingAlleyPrefab, position, rotation);
             alley.transform.localScale = Vector3.one * Mathf.Clamp(bounds.size.z / alleyLength, 0.5f, 2f);
 
             hasPlaced = true;
-            Debug.Log("Bowling alley placed.");
+            Debug.Log("Bowling alley placed in the center of the room.");
         }
         else
         {
