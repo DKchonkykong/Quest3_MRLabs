@@ -6,6 +6,8 @@ public class UpdateScoreBoard : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText; // Reference to the TextMesh Pro component
     [SerializeField] private List<Pin> pins = new List<Pin>(); // List of Pin objects
+    private int currentRound = 1;
+    private int totalPinsHit = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,27 +31,29 @@ public class UpdateScoreBoard : MonoBehaviour
     {
         int pinsHit = 0;
 
-        // Count the number of pins that have fallen (based on their Y-axis position)
         foreach (Pin pin in pins)
         {
-            if (pin.transform.position.y < 0.70) // Replace 'someThreshold' with the Y-axis value that indicates a fallen pin
+            if (pin.transform.position.y < 0.70f)
             {
                 pinsHit++;
             }
         }
 
-        // Update the scoreboard text
+        totalPinsHit += pinsHit;
+
         if (pinsHit == 10)
         {
-            scoreText.text = "Strike!";
+            scoreText.text = $"Round {currentRound}: Strike!\nTotal Pins: {totalPinsHit}";
         }
         else if (pinsHit == 0)
         {
-            scoreText.text = "No pins hit.";
+            scoreText.text = $"Round {currentRound}: No pins hit.\nTotal Pins: {totalPinsHit}";
         }
         else
         {
-            scoreText.text = $"{pinsHit} pin(s) fell.";
+            scoreText.text = $"Round {currentRound}: {pinsHit} pin(s) fell.\nTotal Pins: {totalPinsHit}";
         }
+
+        currentRound++;
     }
 }
