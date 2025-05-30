@@ -12,6 +12,9 @@ public class UpdateScoreBoard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Reset all pins to their initial state
+        ResetPins();
+
         // Initialize each pin and assign this manager
         foreach (Pin pin in pins)
         {
@@ -19,6 +22,16 @@ public class UpdateScoreBoard : MonoBehaviour
         }
 
         UpdateScoreText(); // Initialize the scoreboard
+    }
+
+    // Method to reset all pins to their initial state
+    private void ResetPins()
+    {
+        foreach (Pin pin in pins)
+        {
+            // Assuming Pin has a method to reset its position
+            pin.ResetPosition();
+        }
     }
 
     // Method to update the state of a specific pin
@@ -33,7 +46,7 @@ public class UpdateScoreBoard : MonoBehaviour
 
         foreach (Pin pin in pins)
         {
-            if (pin.transform.position.y < 0.70f)
+            if (pin.transform.position.y < 0.007f)
             {
                 pinsHit++;
             }

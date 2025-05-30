@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Pin
+  - Bowling Ball
   layers:
   - Default
   - TransparentFX

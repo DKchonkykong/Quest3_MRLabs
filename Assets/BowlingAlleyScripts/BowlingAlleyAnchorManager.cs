@@ -1,83 +1,94 @@
 using UnityEngine;
 using Meta.XR.MRUtilityKit;
 using UnityEngine.UI;
- 
+using TMPro;
+
 public enum BowlingMode
 {
     Tutorial,
     AnchorPlacement
 }
- 
+
 public class BowlingAlleyAnchorManager : MonoBehaviour
 {
     [Header("Assign your alley prefab here")]
     public GameObject bowlingAlleyPrefab;
- 
+
     [Header("UI Elements")]
-    public Text feedbackText;
-    public Text instructionText;
-    public Toggle anchorModeToggle;
+    public TextMeshProUGUI feedbackText;
+    public TextMeshProUGUI instructionText;
+    public Button modeSwitchButton; // Changed from Toggle to Button
     public GameObject instructionPanel;
     public GameObject tutorialPanel;
     public float tutorialDisplayTime = 6f;
- 
+
     [Header("Mode Control")]
     public BowlingMode currentMode = BowlingMode.AnchorPlacement;
     public GameObject previewAnchorVisual;
- 
+
     private GameObject currentAlley;
     private MRUKAnchor currentAnchor;
-    private bool useSavedAnchorMode = false;
- 
+
     void Start()
     {
-        useSavedAnchorMode = anchorModeToggle != null && anchorModeToggle.isOn;
         UpdateInstructions();
         PlaceAlley();
- 
+
         if (tutorialPanel != null)
         {
             tutorialPanel.SetActive(true);
             Invoke(nameof(HideTutorial), tutorialDisplayTime);
         }
+
+        if (modeSwitchButton != null)
+        {
+            modeSwitchButton.onClick.AddListener(SwitchMode); // Add listener for button click
+        }
     }
- 
+
     void Update()
     {
         if (currentMode != BowlingMode.AnchorPlacement) return;
- 
+
         if (OVRInput.GetDown(OVRInput.Button.One)) // A button
         {
-            if (!useSavedAnchorMode)
-                PlaceAlley();
+            PlaceAlley();
         }
- 
+
         if (OVRInput.GetDown(OVRInput.Button.Two)) // B button
         {
             DeleteAlleyAndAnchor();
         }
     }
- 
-    public void OnToggleAnchorModeChanged()
+
+    private void SwitchMode()
     {
-        useSavedAnchorMode = anchorModeToggle.isOn;
-        UpdateInstructions();
-        DeleteAlleyAndAnchor();
-        PlaceAlley();
+        if (currentMode == BowlingMode.AnchorPlacement)
+        {
+            SetToTutorialMode();
+        }
+        else
+        {
+            SetToAnchorMode();
+        }
     }
- 
+
     private void UpdateInstructions()
     {
         if (instructionText == null || instructionPanel == null) return;
- 
+
         instructionPanel.SetActive(true);
- 
-        if (useSavedAnchorMode)
-            instructionText.text = "\ud83d\udccc Saved Anchor Mode:\nPress B to clear.\nToggle to switch to manual placement.";
-        else
+
+        if (currentMode == BowlingMode.AnchorPlacement)
+        {
             instructionText.text = "\ud83c\udfaf Manual Placement Mode:\nPress A to place at room center.\nPress B to remove.";
+        }
+        else if (currentMode == BowlingMode.Tutorial)
+        {
+            instructionText.text = "\u2139\ufe0f Tutorial Mode:\nFollow the instructions.";
+        }
     }
- 
+
     private void PlaceAlley()
     {
         DeleteAlleyAndAnchor();
@@ -114,7 +125,7 @@ public class BowlingAlleyAnchorManager : MonoBehaviour
             ShowFeedback("\u26a0\ufe0f Anchor component missing");
         }
     }
- 
+
     private void DeleteAlleyAndAnchor()
     {
         if (currentAlley != null)
@@ -135,7 +146,7 @@ public class BowlingAlleyAnchorManager : MonoBehaviour
 
         ShowFeedback("\ud83d\uddd1\ufe0f Alley and anchor removed");
     }
- 
+
     private void ShowFeedback(string message)
     {
         if (feedbackText != null)
@@ -144,10 +155,10 @@ public class BowlingAlleyAnchorManager : MonoBehaviour
             CancelInvoke(nameof(ClearFeedback));
             Invoke(nameof(ClearFeedback), 2.5f);
         }
- 
+
         Debug.Log("[BowlingAlleyAnchorManager] " + message);
     }
- 
+
     private void ClearFeedback()
     {
         if (feedbackText != null)
@@ -155,19 +166,19 @@ public class BowlingAlleyAnchorManager : MonoBehaviour
             feedbackText.text = "";
         }
     }
- 
+
     public void ToggleTutorialVisibility()
     {
         if (tutorialPanel != null)
             tutorialPanel.SetActive(!tutorialPanel.activeSelf);
     }
- 
+
     private void HideTutorial()
     {
         if (tutorialPanel != null)
             tutorialPanel.SetActive(false);
     }
- 
+
     public void SetToTutorialMode()
     {
         currentMode = BowlingMode.Tutorial;
@@ -175,8 +186,9 @@ public class BowlingAlleyAnchorManager : MonoBehaviour
         instructionPanel.SetActive(false);
         if (previewAnchorVisual != null) previewAnchorVisual.SetActive(false);
         ShowFeedback("\u2139\ufe0f Tutorial mode enabled");
+        UpdateInstructions();
     }
- 
+
     public void SetToAnchorMode()
     {
         currentMode = BowlingMode.AnchorPlacement;
@@ -184,5 +196,6 @@ public class BowlingAlleyAnchorManager : MonoBehaviour
         instructionPanel.SetActive(true);
         if (previewAnchorVisual != null) previewAnchorVisual.SetActive(true);
         ShowFeedback("\ud83d\udccc Anchor placement mode enabled");
+        UpdateInstructions();
     }
 }
