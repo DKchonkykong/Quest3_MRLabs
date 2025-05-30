@@ -1,6 +1,6 @@
 using UnityEngine;
 using Meta.XR.MRUtilityKit;
-
+ 
 public class SmartAlleyPlacer : MonoBehaviour
 {
     public GameObject bowlingAlleyPrefab;
@@ -8,97 +8,67 @@ public class SmartAlleyPlacer : MonoBehaviour
     public float alleyWidth = 1.5f;
     public float padding = 0.5f;
     public LayerMask obstacleLayer;
-
+ 
     private bool sceneReady = false;
     private bool hasPlaced = false;
-
+ 
     void Update()
     {
-        if (!sceneReady)
+        if (!sceneReady && MRUK.Instance != null && MRUK.Instance.Rooms.Count > 0)
         {
-            if (MRUK.Instance != null && MRUK.Instance.Rooms.Count > 0) // Fixed the Rooms > 0 error
-            {
-                sceneReady = true;
-                Debug.Log("MRUK ready.");
-            }
-            return;
+            sceneReady = true;
+            Debug.Log("MRUK rooms loaded.");
         }
-
-        if (!hasPlaced && OVRInput.GetDown(OVRInput.Button.One))
+ 
+        if (!hasPlaced && sceneReady && OVRInput.GetDown(OVRInput.Button.One))
         {
-            Debug.Log("[A] pressed. Attempting alley placement.");
             TryPlaceAlley();
         }
     }
-
+ 
     void TryPlaceAlley()
     {
         MRUKRoom bestRoom = null;
         float bestArea = 0f;
 
-        // Iterate through rooms
         foreach (var room in MRUK.Instance.Rooms)
         {
-            Bounds? bounds = CalculateRoomBounds(room);
-            if (!bounds.HasValue)
+            if (room.FloorAnchor == null || !room.FloorAnchor.VolumeBounds.HasValue) continue;
+
+            Bounds bounds = room.FloorAnchor.VolumeBounds.Value;
+            if (bounds.size.x < alleyWidth + padding || bounds.size.z < alleyLength + padding) continue;
+
+            if (Physics.CheckBox(bounds.center, new Vector3(alleyWidth / 2, 1, alleyLength / 2), Quaternion.identity, obstacleLayer))
                 continue;
 
-            Vector3 size = bounds.Value.size;
-
-            if (size.x < alleyWidth + padding || size.z < alleyLength + padding)
-                continue;
-
-            // Optional physical collision check for the center of the room
-            Vector3 center = bounds.Value.center;
-            if (Physics.CheckBox(center, new Vector3(alleyWidth / 2, 1, alleyLength / 2), Quaternion.identity, obstacleLayer))
-                continue;
-
-            float area = size.x * size.z;
+            float area = bounds.size.x * bounds.size.z;
             if (area > bestArea)
             {
-                bestRoom = room;
                 bestArea = area;
+                bestRoom = room;
             }
         }
 
         if (bestRoom != null)
         {
-            Bounds bounds = CalculateRoomBounds(bestRoom).Value;
-            Vector3 position = bounds.center; // Use the center of the room
-            Quaternion rotation = bounds.size.z >= bounds.size.x ? Quaternion.identity : Quaternion.Euler(0, 90, 0);
+            Bounds roomBounds = bestRoom.FloorAnchor.VolumeBounds.Value;
+            Vector3 centerPos = roomBounds.center;
 
-            GameObject alley = Instantiate(bowlingAlleyPrefab, position, rotation);
-            alley.transform.localScale = Vector3.one * Mathf.Clamp(bounds.size.z / alleyLength, 0.5f, 2f);
+            Quaternion rot = roomBounds.size.z >= roomBounds.size.x ? Quaternion.identity : Quaternion.Euler(0, 90, 0);
+            float scaleFactor = Mathf.Clamp(roomBounds.size.z / alleyLength, 0.25f, 0.8f);
+
+            Vector3 alleyOffset = rot * new Vector3(0, 0, -alleyLength / 2f);
+            Vector3 adjustedPos = centerPos + alleyOffset;
+
+            GameObject alley = Instantiate(bowlingAlleyPrefab, adjustedPos, rot);
+            alley.transform.localScale = Vector3.one * scaleFactor;
 
             hasPlaced = true;
-            Debug.Log("Bowling alley placed in the center of the room.");
+            Debug.Log("Bowling alley placed at center of room.");
         }
         else
         {
-            Debug.LogError("No suitable room found. Alley not placed.");
+            Debug.LogWarning("No valid room or space found.");
         }
-    }
-
-    Bounds? CalculateRoomBounds(MRUKRoom room)
-    {
-        if (room.Anchors == null || room.Anchors.Count == 0)
-            return null;
-
-        Vector3 min = Vector3.positiveInfinity;
-        Vector3 max = Vector3.negativeInfinity;
-
-        foreach (var anchor in room.Anchors)
-        {
-            if (anchor.TryGetComponent(out Renderer renderer))
-            {
-                min = Vector3.Min(min, renderer.bounds.min);
-                max = Vector3.Max(max, renderer.bounds.max);
-            }
-        }
-
-        if (min == Vector3.positiveInfinity || max == Vector3.negativeInfinity)
-            return null;
-
-        return new Bounds((min + max) / 2, max - min);
     }
 }
