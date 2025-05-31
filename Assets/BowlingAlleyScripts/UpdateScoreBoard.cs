@@ -13,7 +13,7 @@ public class UpdateScoreBoard : MonoBehaviour
     void Start()
     {
         // Reset all pins to their initial state
-        ResetPins();
+        ResetPin();
 
         // Initialize each pin and assign this manager
         foreach (Pin pin in pins)
@@ -25,13 +25,14 @@ public class UpdateScoreBoard : MonoBehaviour
     }
 
     // Method to reset all pins to their initial state
-    private void ResetPins()
+    private void ResetPin()
     {
         foreach (Pin pin in pins)
         {
-            // Assuming Pin has a method to reset its position
-            pin.ResetPosition();
+            pin.ResetPin();
+            pin.Knock();
         }
+
     }
 
     // Method to update the state of a specific pin
@@ -46,10 +47,7 @@ public class UpdateScoreBoard : MonoBehaviour
 
         foreach (Pin pin in pins)
         {
-            if (pin.transform.position.y < 0.007f)
-            {
-                pinsHit++;
-            }
+            if (pin.IsKnocked());
         }
 
         totalPinsHit += pinsHit;

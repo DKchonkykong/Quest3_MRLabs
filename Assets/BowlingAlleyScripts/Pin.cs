@@ -2,32 +2,56 @@ using UnityEngine;
 
 public class Pin : MonoBehaviour
 {
-    private bool isKnockedDown = false;
+    private Quaternion initialRotation;
+    private Vector3 initialPosition;
+    private bool isKnocked = false;
+
     private UpdateScoreBoard scoreBoardManager;
 
-    public void ResetPosition()
+    void Start()
     {
-        // Corrected reset position with float values
-        transform.position = new Vector3(0.307f, 0.007f, 0.799f); // Example reset position
-        transform.rotation = Quaternion.identity; // Reset rotation
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
+    }
+
+    void Update()
+    {
+        float tilt = Quaternion.Angle(transform.rotation, Quaternion.identity);
+        if (tilt > 30f && !isKnocked)
+        {
+            Knock();
+        }
+    }
+
+    public void Knock()
+    {
+        if (isKnocked) return;
+        isKnocked = true;
+
+        transform.rotation = Quaternion.Euler(60f, transform.rotation.eulerAngles.y, 0f);
+        transform.position += transform.forward * 0.1f;
+
+        if (scoreBoardManager != null)
+            scoreBoardManager.UpdatePinState(this, true);
+    }
+
+    public void ResetPin()
+    {
+        isKnocked = false;
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+
+        if (scoreBoardManager != null)
+            scoreBoardManager.UpdatePinState(this, false);
+    }
+
+    public bool IsKnocked()
+    {
+        return isKnocked;
     }
 
     public void Initialize(UpdateScoreBoard manager)
     {
-        // Initialization logic
-    }
-
-    public void SetKnockedDown(bool knockedDown)
-    {
-        if (isKnockedDown != knockedDown)
-        {
-            isKnockedDown = knockedDown;
-            scoreBoardManager.UpdatePinState(this, isKnockedDown);
-        }
-    }
-
-    public bool IsKnockedDown()
-    {
-        return isKnockedDown;
+        scoreBoardManager = manager;
     }
 }
