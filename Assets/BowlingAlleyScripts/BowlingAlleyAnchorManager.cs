@@ -1,201 +1,212 @@
+using System;
 using UnityEngine;
-using Meta.XR.MRUtilityKit;
 using UnityEngine.UI;
 using TMPro;
-
+ 
 public enum BowlingMode
 {
     Tutorial,
     AnchorPlacement
 }
-
+ 
 public class BowlingAlleyAnchorManager : MonoBehaviour
 {
-    [Header("Assign your alley prefab here")]
+    [Header("References")]
     public GameObject bowlingAlleyPrefab;
-
-    [Header("UI Elements")]
+    public Transform controllerTransform;
+    public Material previewMaterial;
+    public LayerMask placementLayer;
+ 
+    [Header("UI")]
     public TextMeshProUGUI feedbackText;
     public TextMeshProUGUI instructionText;
-    public Button modeSwitchButton; // Changed from Toggle to Button
+    public Button modeSwitchButton;
     public GameObject instructionPanel;
     public GameObject tutorialPanel;
     public float tutorialDisplayTime = 6f;
-
-    [Header("Mode Control")]
-    public BowlingMode currentMode = BowlingMode.AnchorPlacement;
-    public GameObject previewAnchorVisual;
-
+ 
+    [Header("Placement Settings")]
+    public float rotationSpeed = 60f;
+ 
     private GameObject currentAlley;
-    private MRUKAnchor currentAnchor;
-
+    private GameObject previewAlley;
+    private BowlingMode currentMode = BowlingMode.AnchorPlacement;
+    private bool isPreviewMode = false;
+    private float previewRotationY = 0f;
+ 
     void Start()
     {
         UpdateInstructions();
-        PlaceAlley();
-
+ 
         if (tutorialPanel != null)
         {
             tutorialPanel.SetActive(true);
             Invoke(nameof(HideTutorial), tutorialDisplayTime);
         }
-
+ 
         if (modeSwitchButton != null)
         {
-            modeSwitchButton.onClick.AddListener(SwitchMode); // Add listener for button click
+            modeSwitchButton.onClick.AddListener(SwitchMode);
         }
     }
-
+ 
     void Update()
     {
         if (currentMode != BowlingMode.AnchorPlacement) return;
-
-        if (OVRInput.GetDown(OVRInput.Button.One)) // A button
+ 
+        if (!isPreviewMode && OVRInput.GetDown(OVRInput.Button.One)) // A
         {
-            PlaceAlley();
+            EnterPreviewMode();
         }
-
-        if (OVRInput.GetDown(OVRInput.Button.Two)) // B button
+ 
+        if (isPreviewMode)
         {
-            DeleteAlleyAndAnchor();
+            UpdatePreviewPosition();
+ 
+            float rotationInput = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).x;
+            previewRotationY += rotationInput * rotationSpeed * Time.deltaTime;
+            previewAlley.transform.rotation = Quaternion.Euler(0, previewRotationY, 0);
+ 
+            if (OVRInput.GetDown(OVRInput.Button.Two)) // B
+            {
+                CancelPreview();
+            }
+ 
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger)) // Trigger
+            {
+                ConfirmPlacement();
+            }
         }
     }
-
-    private void SwitchMode()
+ 
+    void SwitchMode()
     {
         if (currentMode == BowlingMode.AnchorPlacement)
-        {
             SetToTutorialMode();
-        }
         else
-        {
             SetToAnchorMode();
-        }
     }
-
-    private void UpdateInstructions()
+ 
+    void UpdateInstructions()
     {
         if (instructionText == null || instructionPanel == null) return;
-
+ 
         instructionPanel.SetActive(true);
-
+ 
         if (currentMode == BowlingMode.AnchorPlacement)
         {
-            instructionText.text = "\ud83c\udfaf Manual Placement Mode:\nPress A to place at room center.\nPress B to remove.";
-        }
-        else if (currentMode == BowlingMode.Tutorial)
-        {
-            instructionText.text = "\u2139\ufe0f Tutorial Mode:\nFollow the instructions.";
-        }
-    }
-
-    private void PlaceAlley()
-    {
-        DeleteAlleyAndAnchor();
-
-        MRUKRoom room = MRUK.Instance.GetCurrentRoom();
-        if (room == null)
-        {
-            ShowFeedback("\u274c No valid MRUK room found");
-            return;
-        }
-
-        Bounds bounds = room.GetRoomBounds();
-        Vector3 min = bounds.min;
-        Vector3 max = bounds.max;
-        Vector3 center = (min + max) / 2f;
-        Vector3 size = max - min;
-
-        bool isLongAlongZ = size.z > size.x;
-        Quaternion rotation = isLongAlongZ ? Quaternion.identity : Quaternion.Euler(0, 90, 0);
-
-        float forwardOffset = 0.5f;
-        Vector3 forwardDir = rotation * Vector3.forward;
-        center += forwardDir * forwardOffset;
-
-        currentAlley = Instantiate(bowlingAlleyPrefab, center, rotation);
-        currentAnchor = room.FloorAnchor != null ? room.FloorAnchor.GetComponent<MRUKAnchor>() : null;
-
-        if (currentAnchor != null)
-        {
-            ShowFeedback("\ud83d\udd39 Alley anchored to floor");
+            instructionText.text = "🎯 Placement Mode:\nPress A to preview\nRight stick to rotate\nTrigger to place\nB to cancel.";
         }
         else
         {
-            ShowFeedback("\u26a0\ufe0f Anchor component missing");
+            instructionText.text = "ℹ️ Tutorial Mode:\nFollow the on-screen instructions.";
         }
     }
-
-    private void DeleteAlleyAndAnchor()
+ 
+    void EnterPreviewMode()
+    {
+        if (previewAlley != null)
+            Destroy(previewAlley);
+ 
+        previewAlley = Instantiate(bowlingAlleyPrefab);
+        ApplyPreviewMaterial(previewAlley);
+        isPreviewMode = true;
+        previewRotationY = 0f;
+        ShowFeedback("👀 Preview mode started");
+    }
+ 
+    void UpdatePreviewPosition()
+    {
+        Ray ray = new Ray(controllerTransform.position, controllerTransform.forward);
+ 
+        if (Physics.Raycast(ray, out RaycastHit hit, 10f, placementLayer))
+        {
+            previewAlley.transform.position = hit.point;
+        }
+    }
+ 
+    void ConfirmPlacement()
     {
         if (currentAlley != null)
-        {
             Destroy(currentAlley);
-            currentAlley = null;
-        }
-
-        if (currentAnchor != null)
+ 
+        currentAlley = Instantiate(bowlingAlleyPrefab, previewAlley.transform.position, previewAlley.transform.rotation);
+        isPreviewMode = false;
+ 
+        if (previewAlley != null)
+            Destroy(previewAlley);
+ 
+        Pose pose = new Pose(currentAlley.transform.position, currentAlley.transform.rotation);
+ 
+        OVRAnchor.CreateSpatialAnchorAsync(pose).OnCompleted(anchor =>
         {
-            MRUKRoom room = MRUK.Instance.GetCurrentRoom();
-            if (room != null)
+            if (anchor == null || anchor == OVRAnchor.Null)
             {
-                room.RemoveAndDestroyAnchor(currentAnchor);
+                ShowFeedback("❌ Failed to create anchor.");
+                return;
             }
-            currentAnchor = null;
-        }
-
-        ShowFeedback("\ud83d\uddd1\ufe0f Alley and anchor removed");
+ 
+            anchor.SaveAsync().OnCompleted(saveResult =>
+            {
+                ShowFeedback("✅ Anchor saved."); // Assume success — no way to verify without Status
+            });
+        });
     }
-
-    private void ShowFeedback(string message)
+ 
+    void CancelPreview()
+    {
+        isPreviewMode = false;
+        if (previewAlley != null)
+            Destroy(previewAlley);
+        ShowFeedback("❌ Placement canceled.");
+    }
+ 
+    void ApplyPreviewMaterial(GameObject obj)
+    {
+        foreach (Renderer r in obj.GetComponentsInChildren<Renderer>())
+        {
+            r.material = previewMaterial;
+        }
+    }
+ 
+    void ShowFeedback(string msg)
     {
         if (feedbackText != null)
         {
-            feedbackText.text = message;
+            feedbackText.text = msg;
             CancelInvoke(nameof(ClearFeedback));
             Invoke(nameof(ClearFeedback), 2.5f);
         }
-
-        Debug.Log("[BowlingAlleyAnchorManager] " + message);
+        Debug.Log("[BowlingAlleyAnchorManager] " + msg);
     }
-
-    private void ClearFeedback()
+ 
+    void ClearFeedback()
     {
         if (feedbackText != null)
-        {
             feedbackText.text = "";
-        }
     }
-
-    public void ToggleTutorialVisibility()
-    {
-        if (tutorialPanel != null)
-            tutorialPanel.SetActive(!tutorialPanel.activeSelf);
-    }
-
-    private void HideTutorial()
+ 
+    void HideTutorial()
     {
         if (tutorialPanel != null)
             tutorialPanel.SetActive(false);
     }
-
+ 
     public void SetToTutorialMode()
     {
         currentMode = BowlingMode.Tutorial;
         tutorialPanel.SetActive(true);
         instructionPanel.SetActive(false);
-        if (previewAnchorVisual != null) previewAnchorVisual.SetActive(false);
-        ShowFeedback("\u2139\ufe0f Tutorial mode enabled");
+        ShowFeedback("ℹ️ Tutorial mode enabled");
         UpdateInstructions();
     }
-
+ 
     public void SetToAnchorMode()
     {
         currentMode = BowlingMode.AnchorPlacement;
         tutorialPanel.SetActive(false);
         instructionPanel.SetActive(true);
-        if (previewAnchorVisual != null) previewAnchorVisual.SetActive(true);
-        ShowFeedback("\ud83d\udccc Anchor placement mode enabled");
+        ShowFeedback("📌 Placement mode enabled");
         UpdateInstructions();
     }
 }
