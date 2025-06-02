@@ -9,7 +9,6 @@ public class MetaBallThrow : MonoBehaviour
     private Vector3 startPos;
     private Quaternion startRot;
 
-    private bool wasGrabbed = false;
 
     void Awake()
     {
@@ -22,15 +21,25 @@ public class MetaBallThrow : MonoBehaviour
         rb.isKinematic = true;
         rb.useGravity = false;
 
-        grabbable.WhenUnselected += OnRelease;
-        grabbable.WhenSelected += OnGrab;
+        grabbable.WhenPointerEventRaised += OnPointerEvent;
+    }
+
+    private void OnPointerEvent(PointerEvent evt)
+    {
+        if (evt.Type == PointerEventType.Select)
+        {
+            OnGrab();
+        }
+        else if (evt.Type == PointerEventType.Unselect)
+        {
+            OnRelease();
+        }
     }
 
     private void OnGrab()
     {
         rb.isKinematic = true;
         rb.useGravity = false;
-        wasGrabbed = true;
     }
 
     private void OnRelease()
