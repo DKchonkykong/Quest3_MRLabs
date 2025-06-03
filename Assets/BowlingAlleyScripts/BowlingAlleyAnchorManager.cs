@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Oculus.Interaction;
 using Oculus.Platform;
@@ -14,29 +15,35 @@ public class BowlingAlleyAnchorSpawner : MonoBehaviour
     private OVRSpatialAnchor spawnedAnchor;
     private GameObject spawnedAlley;
  
-    private void Start()
+    private async void Start()
     {
         if (PlayerPrefs.HasKey(anchorSaveKey))
         {
             Guid uuid = Guid.Parse(PlayerPrefs.GetString(anchorSaveKey));
-            OVRSpatialAnchor.LoadUnboundAnchor(uuid, unbound =>
+            var unboundAnchors = new List<OVRSpatialAnchor.UnboundAnchor>();
+
+            // Load the anchor asynchronously
+            var result = await OVRSpatialAnchor.LoadUnboundAnchorsAsync(
+                new List<Guid> { uuid },
+                unboundAnchors
+            );
+
+            if (unboundAnchors.Count > 0)
             {
-                if (unbound != null)
-                {
-                    GameObject alley = Instantiate(bowlingAlleyPrefab);
-                    spawnedAlley = alley;
- 
-                    var anchor = alley.GetComponent<OVRSpatialAnchor>();
-                    anchor.UnboundAnchor = unbound;
-                    anchor.enabled = true;
- 
-                    Debug.Log("📍 Loaded alley from saved anchor.");
-                }
-                else
-                {
-                    Debug.Log("⚠ No saved anchor found. Ready for placement.");
-                }
-            });
+                GameObject alley = Instantiate(bowlingAlleyPrefab);
+                spawnedAlley = alley;
+
+                var anchor = alley.GetComponent<OVRSpatialAnchor>();
+                // Bind the unbound anchor to the new OVRSpatialAnchor component
+                unboundAnchors[0].BindTo(anchor);
+                anchor.enabled = true;
+
+                Debug.Log("📍 Loaded alley from saved anchor.");
+            }
+            else
+            {
+                Debug.Log("⚠ No saved anchor found. Ready for placement.");
+            }
         }
         else
         {

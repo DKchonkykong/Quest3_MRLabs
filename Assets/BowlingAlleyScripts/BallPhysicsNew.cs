@@ -20,30 +20,38 @@ public class OVRBallThrow : MonoBehaviour
  
     void Update()
     {
+        if (grabbable.isGrabbed)
+        {
+            wasGrabbed = true;
+            rb.isKinematic = true;
+            rb.useGravity = false;
+        }
         else if (wasGrabbed)
-{
-    wasGrabbed = false;
-    rb.isKinematic = false;
-    rb.useGravity = true;
- 
-    var grabber = grabbable.grabbedBy;
-    if (grabber != null)
-    {
-        Rigidbody grabberRB = grabber.GetComponent<Rigidbody>();
-        if (grabberRB != null)
         {
-            rb.velocity = grabberRB.velocity;
-            rb.angularVelocity = grabberRB.angularVelocity;
-        }
-        else
-        {
-            Debug.LogWarning("⚠ Grabber Rigidbody not found — can't apply velocity.");
+            // Just released
+            wasGrabbed = false;
+            rb.isKinematic = false;
+            rb.useGravity = true;
+
+            var grabber = grabbable.grabbedBy;
+            if (grabber != null)
+            {
+                Rigidbody grabberRB = grabber.GetComponent<Rigidbody>();
+                if (grabberRB != null)
+                {
+                    rb.velocity = grabberRB.velocity;
+                    rb.angularVelocity = grabberRB.angularVelocity;
+                }
+                else
+                {
+                    Debug.LogWarning("⚠ Grabber Rigidbody not found — can't apply velocity.");
+                }
+            }
+
+            Invoke(nameof(ResetBall), resetDelay);
         }
     }
  
-    Invoke(nameof(ResetBall), resetDelay);
-}
-    }
     void ResetBall()
     {
         rb.isKinematic = true;
