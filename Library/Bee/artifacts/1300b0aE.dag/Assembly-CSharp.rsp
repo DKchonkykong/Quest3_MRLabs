@@ -112,7 +112,6 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
--define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -437,10 +436,9 @@
 "Assets/BowlingAlleyScripts/EnablePassthroughDepth.cs"
 "Assets/BowlingAlleyScripts/GutterDeadzone.cs"
 "Assets/BowlingAlleyScripts/ModeSwitcher.cs"
+"Assets/BowlingAlleyScripts/MRBowlingBall.cs"
 "Assets/BowlingAlleyScripts/Pin.cs"
-"Assets/BowlingAlleyScripts/SmartAlleyPlacer.cs"
 "Assets/BowlingAlleyScripts/UpdateScoreBoard.cs"
-"Assets/BowlingAlleyScripts/WallPrefabPlacer.cs"
 "Assets/MRUKManager.cs"
 "Assets/SpecialAnchorLabs/Object_Spawner.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
