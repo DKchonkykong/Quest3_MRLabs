@@ -16,7 +16,7 @@ public class OVRBallThrow : MonoBehaviour
     public float boundaryCheckDistance = 1f;
  
     private bool wasGrabbed = false;
- 
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,6 +29,12 @@ public class OVRBallThrow : MonoBehaviour
             if (collider != null)
                 collider.material = ballPhysicsMaterial;
         }
+    }
+
+    void Start()
+    {
+        // Ensure the ball starts at the reset point and doesn't fall due to gravity
+        ResetBall();
     }
  
     void Update()
@@ -88,6 +94,16 @@ public class OVRBallThrow : MonoBehaviour
                 rb.angularVelocity = Vector3.zero;
                 ResetBall();
             }
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Directly notify pin objects when struck so they can update the scoreboard
+        Pin pin = collision.gameObject.GetComponent<Pin>();
+        if (pin != null)
+        {
+            pin.Knock();
         }
     }
  

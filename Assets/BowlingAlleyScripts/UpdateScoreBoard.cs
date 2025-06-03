@@ -13,7 +13,7 @@ public class UpdateScoreBoard : MonoBehaviour
     void Start()
     {
         // Reset all pins to their initial state
-        ResetPin();
+        ResetPins();
 
         // Initialize each pin and assign this manager
         foreach (Pin pin in pins)
@@ -25,19 +25,21 @@ public class UpdateScoreBoard : MonoBehaviour
     }
 
     // Method to reset all pins to their initial state
-    private void ResetPin()
+    private void ResetPins()
     {
         foreach (Pin pin in pins)
         {
             pin.ResetPin();
-            pin.Knock();
         }
-
     }
 
     // Method to update the state of a specific pin
     public void UpdatePinState(Pin pin, bool isKnockedDown)
     {
+        if (isKnockedDown)
+        {
+            totalPinsHit++;
+        }
         UpdateScoreText();
     }
 
@@ -47,12 +49,13 @@ public class UpdateScoreBoard : MonoBehaviour
 
         foreach (Pin pin in pins)
         {
-            if (pin.IsKnocked());
+            if (pin.IsKnocked())
+            {
+                pinsHit++;
+            }
         }
 
-        totalPinsHit += pinsHit;
-
-        if (pinsHit == 10)
+        if (pinsHit == pins.Count)
         {
             scoreText.text = $"Round {currentRound}: Strike!\nTotal Pins: {totalPinsHit}";
         }
