@@ -1,212 +1,84 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using Oculus.Interaction;
+using Oculus.Platform;
+using Oculus.Platform.Models;
  
-public enum BowlingMode
+public class BowlingAlleyAnchorSpawner : MonoBehaviour
 {
-    Tutorial,
-    AnchorPlacement
-}
- 
-public class BowlingAlleyAnchorManager : MonoBehaviour
-{
-    [Header("References")]
     public GameObject bowlingAlleyPrefab;
     public Transform controllerTransform;
-    public Material previewMaterial;
     public LayerMask placementLayer;
+    public string anchorSaveKey = "BowlingAlley_UUID";
  
-    [Header("UI")]
-    public TextMeshProUGUI feedbackText;
-    public TextMeshProUGUI instructionText;
-    public Button modeSwitchButton;
-    public GameObject instructionPanel;
-    public GameObject tutorialPanel;
-    public float tutorialDisplayTime = 6f;
+    private OVRSpatialAnchor spawnedAnchor;
+    private GameObject spawnedAlley;
  
-    [Header("Placement Settings")]
-    public float rotationSpeed = 60f;
- 
-    private GameObject currentAlley;
-    private GameObject previewAlley;
-    private BowlingMode currentMode = BowlingMode.AnchorPlacement;
-    private bool isPreviewMode = false;
-    private float previewRotationY = 0f;
- 
-    void Start()
+    private void Start()
     {
-        UpdateInstructions();
- 
-        if (tutorialPanel != null)
+        if (PlayerPrefs.HasKey(anchorSaveKey))
         {
-            tutorialPanel.SetActive(true);
-            Invoke(nameof(HideTutorial), tutorialDisplayTime);
-        }
- 
-        if (modeSwitchButton != null)
-        {
-            modeSwitchButton.onClick.AddListener(SwitchMode);
-        }
-    }
- 
-    void Update()
-    {
-        if (currentMode != BowlingMode.AnchorPlacement) return;
- 
-        if (!isPreviewMode && OVRInput.GetDown(OVRInput.Button.One)) // A
-        {
-            EnterPreviewMode();
-        }
- 
-        if (isPreviewMode)
-        {
-            UpdatePreviewPosition();
- 
-            float rotationInput = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).x;
-            previewRotationY += rotationInput * rotationSpeed * Time.deltaTime;
-            previewAlley.transform.rotation = Quaternion.Euler(0, previewRotationY, 0);
- 
-            if (OVRInput.GetDown(OVRInput.Button.Two)) // B
+            Guid uuid = Guid.Parse(PlayerPrefs.GetString(anchorSaveKey));
+            OVRSpatialAnchor.LoadUnboundAnchor(uuid, unbound =>
             {
-                CancelPreview();
-            }
+                if (unbound != null)
+                {
+                    GameObject alley = Instantiate(bowlingAlleyPrefab);
+                    spawnedAlley = alley;
  
-            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger)) // Trigger
-            {
-                ConfirmPlacement();
-            }
-        }
-    }
+                    var anchor = alley.GetComponent<OVRSpatialAnchor>();
+                    anchor.UnboundAnchor = unbound;
+                    anchor.enabled = true;
  
-    void SwitchMode()
-    {
-        if (currentMode == BowlingMode.AnchorPlacement)
-            SetToTutorialMode();
-        else
-            SetToAnchorMode();
-    }
- 
-    void UpdateInstructions()
-    {
-        if (instructionText == null || instructionPanel == null) return;
- 
-        instructionPanel.SetActive(true);
- 
-        if (currentMode == BowlingMode.AnchorPlacement)
-        {
-            instructionText.text = "🎯 Placement Mode:\nPress A to preview\nRight stick to rotate\nTrigger to place\nB to cancel.";
+                    Debug.Log("📍 Loaded alley from saved anchor.");
+                }
+                else
+                {
+                    Debug.Log("⚠ No saved anchor found. Ready for placement.");
+                }
+            });
         }
         else
         {
-            instructionText.text = "ℹ️ Tutorial Mode:\nFollow the on-screen instructions.";
+            Debug.Log("🆕 No saved anchor key found. Wait for user to place.");
         }
     }
  
-    void EnterPreviewMode()
+    private void Update()
     {
-        if (previewAlley != null)
-            Destroy(previewAlley);
- 
-        previewAlley = Instantiate(bowlingAlleyPrefab);
-        ApplyPreviewMaterial(previewAlley);
-        isPreviewMode = true;
-        previewRotationY = 0f;
-        ShowFeedback("👀 Preview mode started");
+        // If not placed yet, allow user to spawn it using A and place
+        if (spawnedAlley == null && OVRInput.GetDown(OVRInput.Button.One)) // A button
+        {
+            TryPlaceAlley();
+        }
     }
  
-    void UpdatePreviewPosition()
+    private void TryPlaceAlley()
     {
         Ray ray = new Ray(controllerTransform.position, controllerTransform.forward);
- 
         if (Physics.Raycast(ray, out RaycastHit hit, 10f, placementLayer))
         {
-            previewAlley.transform.position = hit.point;
-        }
-    }
+            Vector3 placePos = hit.point;
+            Quaternion placeRot = Quaternion.LookRotation(Vector3.forward);
  
-    void ConfirmPlacement()
-    {
-        if (currentAlley != null)
-            Destroy(currentAlley);
+            spawnedAlley = Instantiate(bowlingAlleyPrefab, placePos, placeRot);
  
-        currentAlley = Instantiate(bowlingAlleyPrefab, previewAlley.transform.position, previewAlley.transform.rotation);
-        isPreviewMode = false;
+            var anchor = spawnedAlley.GetComponent<OVRSpatialAnchor>();
+            anchor.enabled = true;
  
-        if (previewAlley != null)
-            Destroy(previewAlley);
- 
-        Pose pose = new Pose(currentAlley.transform.position, currentAlley.transform.rotation);
- 
-        OVRAnchor.CreateSpatialAnchorAsync(pose).OnCompleted(anchor =>
-        {
-            if (anchor == null || anchor == OVRAnchor.Null)
+            anchor.Save((savedAnchor, success) =>
             {
-                ShowFeedback("❌ Failed to create anchor.");
-                return;
-            }
- 
-            anchor.SaveAsync().OnCompleted(saveResult =>
-            {
-                ShowFeedback("✅ Anchor saved."); // Assume success — no way to verify without Status
+                if (success)
+                {
+                    PlayerPrefs.SetString(anchorSaveKey, savedAnchor.Uuid.ToString());
+                    PlayerPrefs.Save();
+                    Debug.Log("✅ Bowling alley anchor saved.");
+                }
+                else
+                {
+                    Debug.LogError("❌ Failed to save bowling alley anchor.");
+                }
             });
-        });
-    }
- 
-    void CancelPreview()
-    {
-        isPreviewMode = false;
-        if (previewAlley != null)
-            Destroy(previewAlley);
-        ShowFeedback("❌ Placement canceled.");
-    }
- 
-    void ApplyPreviewMaterial(GameObject obj)
-    {
-        foreach (Renderer r in obj.GetComponentsInChildren<Renderer>())
-        {
-            r.material = previewMaterial;
         }
-    }
- 
-    void ShowFeedback(string msg)
-    {
-        if (feedbackText != null)
-        {
-            feedbackText.text = msg;
-            CancelInvoke(nameof(ClearFeedback));
-            Invoke(nameof(ClearFeedback), 2.5f);
-        }
-        Debug.Log("[BowlingAlleyAnchorManager] " + msg);
-    }
- 
-    void ClearFeedback()
-    {
-        if (feedbackText != null)
-            feedbackText.text = "";
-    }
- 
-    void HideTutorial()
-    {
-        if (tutorialPanel != null)
-            tutorialPanel.SetActive(false);
-    }
- 
-    public void SetToTutorialMode()
-    {
-        currentMode = BowlingMode.Tutorial;
-        tutorialPanel.SetActive(true);
-        instructionPanel.SetActive(false);
-        ShowFeedback("ℹ️ Tutorial mode enabled");
-        UpdateInstructions();
-    }
- 
-    public void SetToAnchorMode()
-    {
-        currentMode = BowlingMode.AnchorPlacement;
-        tutorialPanel.SetActive(false);
-        instructionPanel.SetActive(true);
-        ShowFeedback("📌 Placement mode enabled");
-        UpdateInstructions();
     }
 }
