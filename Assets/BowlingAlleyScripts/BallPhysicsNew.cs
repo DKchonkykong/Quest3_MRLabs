@@ -9,6 +9,11 @@ public class OVRBallThrow : MonoBehaviour
  
     public Transform resetPoint;
     public float resetDelay = 5f;
+    public float velocityMultiplier = 0.5f; // Reduce throw velocity
+    public float maxVelocity = 10f; // Cap maximum velocity
+    public PhysicMaterial ballPhysicsMaterial; // Assign in inspector
+    public LayerMask boundaryLayer = -1; // Layer for boundary detection
+    public float boundaryCheckDistance = 1f;
  
     private bool wasGrabbed = false;
  
@@ -16,6 +21,14 @@ public class OVRBallThrow : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         grabbable = GetComponent<OVRGrabbable>();
+        
+        // Apply physics material if assigned
+        if (ballPhysicsMaterial != null)
+        {
+            Collider collider = GetComponent<Collider>();
+            if (collider != null)
+                collider.material = ballPhysicsMaterial;
+        }
     }
  
     void Update()
@@ -39,8 +52,18 @@ public class OVRBallThrow : MonoBehaviour
                 Rigidbody grabberRB = grabber.GetComponent<Rigidbody>();
                 if (grabberRB != null)
                 {
-                    rb.velocity = grabberRB.velocity;
-                    rb.angularVelocity = grabberRB.angularVelocity;
+                    // Apply dampened velocity
+                    Vector3 throwVelocity = grabberRB.velocity * velocityMultiplier;
+                    Vector3 throwAngularVelocity = grabberRB.angularVelocity * velocityMultiplier;
+                    
+                    // Cap the velocity
+                    if (throwVelocity.magnitude > maxVelocity)
+                    {
+                        throwVelocity = throwVelocity.normalized * maxVelocity;
+                    }
+                    
+                    rb.velocity = throwVelocity;
+                    rb.angularVelocity = throwAngularVelocity;
                 }
                 else
                 {
@@ -52,12 +75,28 @@ public class OVRBallThrow : MonoBehaviour
         }
     }
  
+    void FixedUpdate()
+    {
+        // Check if ball is about to fall off the alley
+        if (!rb.isKinematic && rb.useGravity)
+        {
+            RaycastHit hit;
+            if (!Physics.Raycast(transform.position, Vector3.down, out hit, boundaryCheckDistance, boundaryLayer))
+            {
+                // Ball is about to fall off - stop it or reset it
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                ResetBall();
+            }
+        }
+    }
+ 
     void ResetBall()
     {
         rb.isKinematic = true;
         rb.useGravity = false;
-rb.velocity = Vector3.zero;
-rb.angularVelocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
  
         if (resetPoint != null)
         {
